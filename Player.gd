@@ -1,7 +1,7 @@
 extends Node2D
 
 var speed = 124
-var tile_size = 32
+var tile_size = 64
 
 var last_position = Vector2()
 var target_position = Vector2()
@@ -33,6 +33,8 @@ func _process(delta):
 		"walking":
 			animation_loop()
 			movement_loop(delta)
+		"casting":
+			animation_loop()
 
 func get_movedir():
 	var left = Input.is_action_pressed("ui_left")
@@ -67,6 +69,8 @@ func animation_loop():
 			animation_switch("idle")
 		"walking":
 			animation_switch("walk")
+		"casting":
+			animation_switch("spell")
 
 func movement_loop(delta):
 	position += speed * movedir * delta
@@ -110,9 +114,16 @@ func control_loop():
 			set_spritedir(targetdir)
 			allow_input()
 			
+	if Input.is_action_just_pressed("ui_b"):
+		state = "casting"
+		$SpellTimer.start()
+			
 func allow_input():
 	input_allowed = false
 	$InputDelay.start()
 
 func _on_InputDelay_timeout():
 	input_allowed = true
+	
+func _on_SpellTimer_timeout():
+	state = "idle"
