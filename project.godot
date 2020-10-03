@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Witch Game"
-run/main_scene="res://Player.tscn"
+run/main_scene="res://Area.tscn"
 config/icon="res://icon.png"
 
 [input]
