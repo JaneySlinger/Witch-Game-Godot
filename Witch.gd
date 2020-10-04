@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Witch
 
 var speed = 150
 var movedir = Vector2()
