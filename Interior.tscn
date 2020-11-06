@@ -1,11 +1,87 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Resources/interior.tres" type="TileSet" id=1]
 [ext_resource path="res://Witch.tscn" type="PackedScene" id=2]
 [ext_resource path="res://DoorToOutside.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Green cauldron.png" type="Texture" id=4]
+[ext_resource path="res://Cauldron.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Purple cauldron (1).png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41.0742, 23.6207 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "green",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "purple",
+"speed": 5.0
+} ]
 
 [node name="Interior" type="Node2D"]
 
@@ -39,7 +115,7 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 327687, 6, 0, 327690, 6, 0, 327691, 6, 0, 327694, 7, 0, 327695, 7, 0, 327697, 7, 0, 327698, 7, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327703, 7, 0, 458760, 1, 0, 458763, 2, 1, 524299, 3, 1, 589842, 4, 0, 589843, 4, 0, 655382, 2, 2, 720918, 3, 2 )
+tile_data = PoolIntArray( 327687, 6, 0, 327690, 6, 0, 327691, 6, 0, 327694, 7, 0, 327695, 7, 0, 327697, 7, 0, 327698, 7, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327703, 7, 0, 458760, 1, 0, 458763, 2, 1, 524299, 3, 1, 589842, 4, 0, 589843, 4, 0, 589847, 10, 1, 589848, 10, 2, 655382, 2, 2, 720918, 3, 2 )
 
 [node name="Witch" parent="." instance=ExtResource( 2 )]
 position = Vector2( 545.056, 199.311 )
@@ -52,3 +128,9 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToOutside"]
 position = Vector2( 640.926, 489.281 )
 shape = SubResource( 1 )
+
+[node name="Cauldron" type="AnimatedSprite" parent="."]
+position = Vector2( 521.607, 418.294 )
+frames = SubResource( 14 )
+animation = "purple"
+script = ExtResource( 5 )
