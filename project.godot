@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Witch",
 "language": "GDScript",
-"path": "res://Witch.gd"
+"path": "res://Scripts/Witch.gd"
 } ]
 _global_script_class_icons={
 "Witch": ""
@@ -21,8 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Witch Game"
-run/main_scene="res://Area.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/Area.tscn"
+config/icon="res://Resources/Textures/icon.png"
 
 [input]
 

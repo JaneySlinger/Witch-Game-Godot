@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=30 format=2]
 
-[ext_resource path="res://Aurora Tileset.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Textures/Aurora Tileset.png" type="Texture" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 14.7345, 25.1819, -47.9583, 25.1819, -47.9583, 12.1611, 14.7345, 12.1611 )
