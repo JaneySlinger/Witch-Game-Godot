@@ -11,6 +11,13 @@ var spritedir = DOWN
 var spritedir_name = "down"
 var state = "idle"
 
+#Inventory
+enum Mushroom { BLUE, BLUE_SPARKLE, 
+				PURPLE, PURPLE_SPARKLE, 
+				RED, RED_SPARKLE, 
+				ORANGE, ORANGE_SPARKLE }
+var mushrooms = [0, 0, 0, 0, 0, 0, 0, 0]
+
 func _process(delta):
 	match state:
 		"idle":
@@ -84,3 +91,8 @@ func set_spritedir(direction):
 
 func _on_SpellTimer_timeout():
 	state = "idle"
+	
+func add_mushroom(type):
+	mushrooms[type] = mushrooms[type] + 1
+	print(mushrooms)
+	
