@@ -17,6 +17,36 @@ install:
 script:
 - docker run -e EXPORT_NAME="HTML5"           -e OUTPUT_FILENAME="index.html"           -v $(pwd):/build/src -v $(pwd)/output/html5:/build/output   gamedrivendesign/godot-export
 
+# Now comes deployment related code.
+# To make this work, you need to set a GITHUB_TOKEN environment variable through
+# the TravisCI web ui. For more information take a look at the TravisCI docs:
+# https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+
+# This creates zip files from the exported game builds for the
+# three desktop platforms
+before_deploy:
+#- zip -j "${GAME_NAME}-linux.zip"   output/linux/*
+#- zip -j "${GAME_NAME}-windows.zip" output/windows/*
+# No need to zip the mac game, because it already is a zip
+#- cp -R output/mac/* .
+
+deploy:
+# The following block is responsible to upload the zip files
+# created above to GitHub Releases whenever a new git tag
+# is created.
+#- provider: releases
+  #skip-cleanup: true
+  #api_key: $GITHUB_TOKEN
+  #file:
+    #- "${GAME_NAME}-linux.zip"
+    #- "${GAME_NAME}-windows.zip"
+    #- "${GAME_NAME}-mac.zip"
+  #on:
+    # Create GitHub Releases for new git tags
+    # regardless of the branch.
+    #all_branches: true
+    #tags: true
+
 # The following block is responsible for pushing the HTML5 version of the game
 # to GitHub Pages. To do so, Travis will commit the contents specified in "local-dir"
 # to a "gh-pages" branch in your repository. It will then be accessible at:
