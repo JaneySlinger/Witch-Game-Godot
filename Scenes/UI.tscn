@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Items.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Textures/blue_potion.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.933333, 0.858824, 0.603922, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 960.0
+margin_bottom = 560.0
+custom_styles/bg = SubResource( 1 )
+items = [ "Test Item", ExtResource( 2 ), false ]
+max_columns = 4
+same_column_width = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
