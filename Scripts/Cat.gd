@@ -10,7 +10,7 @@ var spritedir = DOWN
 var spritedir_name = "down"
 var state = "idle"
 
-func _process(delta):
+func _process(_delta):
 	match state:
 		"idle":
 			control_loop()

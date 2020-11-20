@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Resources/interior.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Witch.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Resources/Textures/Green cauldron.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Cauldron.gd" type="Script" id=5]
 [ext_resource path="res://Resources/Textures/Purple cauldron (1).png" type="Texture" id=6]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41.0742, 23.6207 )
@@ -134,3 +135,6 @@ position = Vector2( 521.607, 418.294 )
 frames = SubResource( 14 )
 animation = "purple"
 script = ExtResource( 5 )
+
+[node name="Inventory" parent="." instance=ExtResource( 7 )]
+visible = false

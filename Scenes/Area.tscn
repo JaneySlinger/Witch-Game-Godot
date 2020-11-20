@@ -31,62 +31,62 @@ region = Rect2( 768, 0, 256, 256 )
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 256, 256, 256 )
+region = Rect2( 0, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 256, 256, 256 )
+region = Rect2( 256, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 256, 256, 256 )
+region = Rect2( 512, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 256, 256, 256 )
+region = Rect2( 768, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 768, 256, 256 )
+region = Rect2( 0, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 768, 256, 256 )
+region = Rect2( 256, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 768, 256, 256 )
+region = Rect2( 512, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 768, 256, 256 )
+region = Rect2( 768, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 512, 256, 256 )
+region = Rect2( 0, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 512, 256, 256 )
+region = Rect2( 256, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 512, 256, 256 )
+region = Rect2( 512, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 512, 256, 256 )
+region = Rect2( 768, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
@@ -111,22 +111,22 @@ region = Rect2( 768, 768, 256, 256 )
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 512, 256, 256 )
+region = Rect2( 0, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 512, 256, 256 )
+region = Rect2( 256, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 512, 256, 256 )
+region = Rect2( 512, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 512, 256, 256 )
+region = Rect2( 768, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
@@ -151,22 +151,22 @@ region = Rect2( 768, 256, 256, 256 )
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 256, 256 )
+region = Rect2( 0, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 0, 256, 256 )
+region = Rect2( 256, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 0, 256, 256 )
+region = Rect2( 512, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 0, 256, 256 )
+region = Rect2( 768, 768, 256, 256 )
 
 [sub_resource type="SpriteFrames" id=33]
 animations = [ {
@@ -177,37 +177,37 @@ animations = [ {
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
-"name": "idle_right",
+"name": "walk_left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
-"name": "idle_up",
+"name": "idle_left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
-"name": "idle_left",
+"name": "walk_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "idle_up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": true,
-"name": "walk_left",
+"name": "idle_down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
 "loop": true,
-"name": "walk_right",
+"name": "idle_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
 "loop": true,
-"name": "idle_down",
+"name": "walk_up",
 "speed": 5.0
 } ]
 
@@ -253,7 +253,7 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 131091, 24, 0, 327698, 3, 1, 393234, 2, 131072, 458774, 3, 0, 524297, 2, 131073, 524298, 3, 4, 524300, 6, 0, 524311, 3, 3, 655358, 6, 0, 720919, 3, 3, 720920, 3, 3, 720921, 3, 3, 720922, 3, 3, 720923, 3, 3, 720924, 3, 3, 720925, 3, 3, 720926, 3, 3, 720927, 3, 3, 786437, 3, 2, 786453, 11, 0, 917506, 3, 4, 983064, 10, 0, 1048581, 6, 0, 1048582, 6, 0, 1048583, 6, 0, 1048584, 6, 0, 1048585, 6, 0, 1048586, 6, 0, 1048587, 6, 0, 1048588, 6, 0, 1048589, 6, 0, 1048591, 2, 196609, 1114141, 10, 0 )
+tile_data = PoolIntArray( 131091, 24, 0, 327698, 3, 1, 458774, 3, 0, 524298, 3, 4, 524300, 6, 0, 524311, 3, 3, 655358, 6, 0, 720919, 3, 3, 720920, 3, 3, 720921, 3, 3, 720922, 3, 3, 720923, 3, 3, 720924, 3, 3, 720925, 3, 3, 720926, 3, 3, 720927, 3, 3, 786437, 3, 2, 786453, 11, 0, 917506, 3, 4, 983064, 10, 0, 1048581, 6, 0, 1048582, 6, 0, 1048583, 6, 0, 1048584, 6, 0, 1048585, 6, 0, 1048586, 6, 0, 1048587, 6, 0, 1048588, 6, 0, 1048589, 6, 0, 1114141, 10, 0 )
 
 [node name="Witch" parent="." instance=ExtResource( 4 )]
 
@@ -288,16 +288,27 @@ shape = SubResource( 35 )
 
 [node name="Mushroom" parent="." instance=ExtResource( 6 )]
 position = Vector2( 191, 334 )
-type = 4
+type = 6
 
 [node name="Mushroom2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 442.091, 279.383 )
-type = 3
+type = 1
 
 [node name="Mushroom3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 110.126, 158.071 )
 type = 7
 
-[node name="Control" parent="." instance=ExtResource( 7 )]
+[node name="Mushroom4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 869.018, 292.17 )
+type = 5
+
+[node name="Mushroom5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 497.716, 508.146 )
+type = 2
+
+[node name="Inventory" parent="." instance=ExtResource( 7 )]
+visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
+
+[editable path="Inventory"]
