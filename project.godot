@@ -24,6 +24,10 @@ config/name="Witch Game"
 run/main_scene="res://Scenes/Area.tscn"
 config/icon="res://Resources/Textures/icon.png"
 
+[autoload]
+
+PersistedInventory="*res://Scripts/PersistedInventory.gd"
+
 [input]
 
 ui_left={
