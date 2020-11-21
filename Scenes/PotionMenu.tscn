@@ -1,0 +1,197 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Resources/Textures/Items/potion_blue.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Styles/BackgroundColour.tres" type="StyleBox" id=2]
+[ext_resource path="res://Resources/Textures/Items/potion_purple.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Textures/Items/potion_green.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Textures/Items/potion_red.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Fonts/DancingScript-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Resources/Styles/LighterBackground.tres" type="StyleBox" id=7]
+[ext_resource path="res://Resources/Textures/Items/mushroom_orange_2.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Textures/Items/mushroom_purple_1.png" type="Texture" id=9]
+[ext_resource path="res://Resources/Textures/Items/mushroom_blue_1.png" type="Texture" id=10]
+[ext_resource path="res://Resources/Textures/Items/mushroom_red_2.png" type="Texture" id=11]
+[ext_resource path="res://Resources/Textures/Items/mushroom_blue_2.png" type="Texture" id=12]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.886275, 0.756863, 0.901961, 0.631373 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 6 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1010.0
+margin_bottom = 590.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 355.0
+margin_bottom = 565.0
+custom_styles/bg = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+items = [ "Fly Me to the Moon", ExtResource( 1 ), false, "Despair Squid Repellent", ExtResource( 3 ), false, "Light in a bottle", ExtResource( 4 ), false, "Headache Be Gone", ExtResource( 5 ), false, "Tell No Lies", ExtResource( 3 ), false, "Itching Potion", ExtResource( 4 ), false, "Anti-itching Potion", ExtResource( 4 ), false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 370.0
+margin_top = 26.0
+margin_right = 994.0
+margin_bottom = 575.0
+custom_styles/panel = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotionIcon" type="TextureRect" parent="Panel2"]
+margin_left = 24.9742
+margin_top = 31.1888
+margin_right = 144.974
+margin_bottom = 145.189
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotionName" type="RichTextLabel" parent="Panel2"]
+margin_left = 155.232
+margin_top = 17.5029
+margin_right = 590.232
+margin_bottom = 89.5029
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Fly Me to the Moon"
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotionInfo" type="RichTextLabel" parent="Panel2"]
+margin_left = 156.0
+margin_top = 84.0
+margin_right = 585.0
+margin_bottom = 155.0
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "A potion that will have you feeling light on your feet. Maybe a little too light..."
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestsRequiring" type="ItemList" parent="Panel2"]
+margin_left = 11.0
+margin_top = 191.427
+margin_right = 612.0
+margin_bottom = 265.427
+custom_styles/bg = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+items = [ "Save the Cat", ExtResource( 1 ), false, "Cure the Itching Arm", ExtResource( 1 ), false, "Light up the Dark Room", ExtResource( 1 ), false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestLabel" type="Label" parent="Panel2"]
+margin_left = 10.5946
+margin_top = 173.752
+margin_right = 50.5946
+margin_bottom = 187.752
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Needed for quests:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Panel2"]
+margin_left = 41.0
+margin_top = 293.592
+margin_right = 220.0
+margin_bottom = 325.592
+rect_scale = Vector2( 3, 3 )
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ingredient1" type="TextureRect" parent="Panel2/GridContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 12 )
+
+[node name="Ingredient2" type="TextureRect" parent="Panel2/GridContainer"]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+texture = ExtResource( 9 )
+
+[node name="Ingredient3" type="TextureRect" parent="Panel2/GridContainer"]
+margin_left = 72.0
+margin_right = 104.0
+margin_bottom = 32.0
+texture = ExtResource( 11 )
+
+[node name="Ingredient4" type="TextureRect" parent="Panel2/GridContainer"]
+margin_left = 108.0
+margin_right = 140.0
+margin_bottom = 32.0
+texture = ExtResource( 10 )
+
+[node name="Ingredient5" type="TextureRect" parent="Panel2/GridContainer"]
+margin_left = 144.0
+margin_right = 176.0
+margin_bottom = 32.0
+texture = ExtResource( 8 )
+
+[node name="IngredientsLabel" type="Label" parent="Panel2"]
+margin_left = 11.0284
+margin_top = 272.141
+margin_right = 84.0284
+margin_bottom = 286.141
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ingredients"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel2"]
+margin_left = 414.0
+margin_top = 445.0
+margin_right = 507.0
+margin_bottom = 485.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Brew"
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
