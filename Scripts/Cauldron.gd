@@ -8,6 +8,6 @@ extends AnimatedSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	play("purple")	#currently choose either purple or green
+	play("green")	#currently choose either purple or green
 
 
