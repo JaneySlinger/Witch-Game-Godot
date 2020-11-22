@@ -1,18 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Textures/Items/potion_blue.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Styles/BackgroundColour.tres" type="StyleBox" id=2]
-[ext_resource path="res://Resources/Textures/Items/potion_purple.png" type="Texture" id=3]
-[ext_resource path="res://Resources/Textures/Items/potion_green.png" type="Texture" id=4]
-[ext_resource path="res://Resources/Textures/Items/potion_red.png" type="Texture" id=5]
 [ext_resource path="res://Resources/Fonts/DancingScript-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Resources/Styles/LighterBackground.tres" type="StyleBox" id=7]
-[ext_resource path="res://Resources/Textures/Items/mushroom_orange_2.png" type="Texture" id=8]
-[ext_resource path="res://Resources/Textures/Items/mushroom_purple_1.png" type="Texture" id=9]
-[ext_resource path="res://Resources/Textures/Items/mushroom_blue_1.png" type="Texture" id=10]
-[ext_resource path="res://Resources/Textures/Items/mushroom_red_2.png" type="Texture" id=11]
-[ext_resource path="res://Resources/Textures/Items/mushroom_blue_2.png" type="Texture" id=12]
-[ext_resource path="res://Scenes/PotionMenu.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/PotionMenu.gd" type="Script" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.886275, 0.756863, 0.901961, 0.631373 )
@@ -49,14 +41,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ItemList" type="ItemList" parent="Panel"]
+[node name="PotionList" type="ItemList" parent="Panel"]
 margin_left = 15.0
 margin_top = 15.0
 margin_right = 355.0
 margin_bottom = 565.0
 custom_styles/bg = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-items = [ "Fly Me to the Moon", ExtResource( 1 ), false, "Despair Squid Repellent", ExtResource( 3 ), false, "Light in a bottle", ExtResource( 4 ), false, "Headache Be Gone", ExtResource( 5 ), false, "Tell No Lies", ExtResource( 3 ), false, "Itching Potion", ExtResource( 4 ), false, "Anti-itching Potion", ExtResource( 4 ), false ]
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -113,9 +104,9 @@ __meta__ = {
 
 [node name="QuestsRequiring" type="ItemList" parent="Panel2"]
 margin_left = 11.0
-margin_top = 191.427
+margin_top = 191.0
 margin_right = 612.0
-margin_bottom = 265.427
+margin_bottom = 264.0
 custom_styles/bg = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 items = [ "Save the Cat", ExtResource( 1 ), false, "Cure the Itching Arm", ExtResource( 1 ), false, "Light up the Dark Room", ExtResource( 1 ), false ]
@@ -146,33 +137,22 @@ __meta__ = {
 }
 
 [node name="Ingredient1" type="TextureRect" parent="Panel2/GridContainer"]
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 12 )
 
 [node name="Ingredient2" type="TextureRect" parent="Panel2/GridContainer"]
-margin_left = 36.0
-margin_right = 68.0
-margin_bottom = 32.0
-texture = ExtResource( 9 )
+margin_left = 4.0
+margin_right = 4.0
 
 [node name="Ingredient3" type="TextureRect" parent="Panel2/GridContainer"]
-margin_left = 72.0
-margin_right = 104.0
-margin_bottom = 32.0
-texture = ExtResource( 11 )
+margin_left = 8.0
+margin_right = 8.0
 
 [node name="Ingredient4" type="TextureRect" parent="Panel2/GridContainer"]
-margin_left = 108.0
-margin_right = 140.0
-margin_bottom = 32.0
-texture = ExtResource( 10 )
+margin_left = 12.0
+margin_right = 12.0
 
 [node name="Ingredient5" type="TextureRect" parent="Panel2/GridContainer"]
-margin_left = 144.0
-margin_right = 176.0
-margin_bottom = 32.0
-texture = ExtResource( 8 )
+margin_left = 16.0
+margin_right = 16.0
 
 [node name="IngredientsLabel" type="Label" parent="Panel2"]
 margin_left = 11.0284
@@ -197,3 +177,4 @@ icon = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="item_selected" from="Panel/PotionList" to="." method="_on_PotionList_item_selected"]

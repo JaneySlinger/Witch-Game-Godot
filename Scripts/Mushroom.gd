@@ -8,6 +8,7 @@ enum Mushroom { BLUE, BLUE_SPARKLE,
 export(Mushroom) var type = Mushroom.BLUE
 
 onready var itemList = get_node("../Inventory/ItemList")
+onready var properties = GlobalIngredients.get_ingredients()
 
 var sprite_rects = [Rect2(224, 352, 32, 32),
 					Rect2(224, 384, 32, 32),
@@ -17,33 +18,6 @@ var sprite_rects = [Rect2(224, 352, 32, 32),
 					Rect2(256, 384, 32, 32),
 					Rect2(224, 416, 32, 32),
 					Rect2(224, 448, 32, 32)]
-
-var properties = [
-	{
-		"label": "Blue Mushroom", 
-		"item_name": "mushroom_blue_1"},
-	{
-		"label": "Blue Sparkle Mushroom", 
-		"item_name": "mushroom_blue_2"},
-	{
-		"label": "Purple Mushroom",
-		"item_name": "mushroom_purple_1"},
-	{
-		"label": "Purple Sparkle Mushroom",
-		"item_name": "mushroom_purple_2"},
-	{
-		"label": "Red Mushroom",
-		"item_name": "mushroom_red_1"},
-	{
-		"label": "Red Sparkle Mushroom",
-		"item_name": "mushroom_red_2"},
-	{
-		"label": "Orange Mushroom",
-		"item_name": "mushroom_orange_1"},
-	{
-		"label": "Orange Sparkle Mushroom",
-		"item_name": "mushroom_orange_2"}
-	]
 
 func _process(delta):
 	#also changes it in editor apparently

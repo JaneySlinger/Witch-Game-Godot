@@ -27,6 +27,8 @@ config/icon="res://Resources/Textures/icon.png"
 [autoload]
 
 PersistedInventory="*res://Scripts/PersistedInventory.gd"
+GlobalPotions="*res://Scripts/GlobalPotions.gd"
+GlobalIngredients="*res://Scripts/GlobalIngredients.gd"
 
 [input]
 
