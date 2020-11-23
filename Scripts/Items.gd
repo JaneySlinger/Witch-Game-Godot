@@ -12,7 +12,7 @@ func _ready():
 	for item in PersistedInventory.items:
 		add_to_inventory(item["label"], item["item_name"])
 
-func remove_from_inventory(label, item_name):
+func remove_from_inventory(label):
 	print("remove method")
 	for index in range(get_item_count()):
 		if(get_item_text(index) == label):

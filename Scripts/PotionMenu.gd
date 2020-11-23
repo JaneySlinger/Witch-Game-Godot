@@ -9,6 +9,10 @@ onready var brewButton = get_node("Panel2/BrewButton")
 
 onready var potions = GlobalPotions.get_potions() 
 
+var currentPotionName
+var currentPotionIconRef
+var currentPotionIngredients
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if (Input.is_action_just_pressed("ui_cancel")):
@@ -21,14 +25,17 @@ func _ready():
 	_on_PotionList_item_selected(0)
 
 func _on_PotionList_item_selected(index):
-	potionNameLabel.text = potions[index]["name"]
+	#save the name and icon value so it can be added to inventory later
+	currentPotionName = potions[index]["name"]
+	currentPotionIconRef = potions[index]["icon"]
+	potionNameLabel.text = currentPotionName
 	potionInfoLabel.text = potions[index]["description"]
-	var texture = load("res://Resources/Textures/Items/" + potions[index]["icon"] + ".png")
+	var texture = load("res://Resources/Textures/Items/" + currentPotionIconRef + ".png")
 	potionIconDisplay.texture = texture
 	setQuests(index, texture)
 	setIngredientTextures(index)
 	brewButton.icon = texture
-	brewButton.disabled = !canBrewPotion(index)
+	brewButton.disabled = !canBrewPotion()
 	
 func setQuests(index, texture):
 	questList.clear()
@@ -37,24 +44,40 @@ func setQuests(index, texture):
 		questList.add_item(quests[quest], texture, false)
 		
 func setIngredientTextures(index):
-	var potion_ingredients = potions[index]["ingredients"]
-	for potion_ingredient in range(potion_ingredients.size()):
+	clearIngredientTextures()
+	currentPotionIngredients = potions[index]["ingredients"]
+	for potion_ingredient in range(currentPotionIngredients.size()):
 		if(potion_ingredient < 5):
 			var textureRect = get_node("Panel2/GridContainer/Ingredient" + String(potion_ingredient + 1))
-			textureRect.texture = load("res://Resources/Textures/Items/" + potion_ingredients[potion_ingredient] + ".png")
+			textureRect.texture = load("res://Resources/Textures/Items/" + currentPotionIngredients[potion_ingredient] + ".png")
+
+func clearIngredientTextures():
+	for index in range(5):
+		get_node("Panel2/GridContainer/Ingredient" + String(index + 1)).texture = null
 	
-func canBrewPotion(index):
-	#stubbed out 
-	return true
-	
-	
-	
-	
-	
-	
-	
-	
+func canBrewPotion():
+	return PersistedInventory.allItemsInInventory(currentPotionIngredients)
+	#for item_name in currentPotionIngredients:
+		#if !PersistedInventory.isItemInInventory(item_name):
+			#print(item_name + " is not in the inventory")
+			#return false
+	#print("All required items are in the inventory")
+	#return true
 	
 
+func _on_BrewButton_pressed():
+	#loop through and remove ingredients from the inventory
+	if(canBrewPotion()):
+		for ingredient_name in currentPotionIngredients:
+			#get the item index in the globalIngredients file to get the label
+			PersistedInventory.remove_item(GlobalIngredients.get_ingredient_label(ingredient_name), ingredient_name)
+		PersistedInventory.add_item(currentPotionName, currentPotionIconRef)
+	
+	
+	
+	
+	
+	
+	
 	
 	

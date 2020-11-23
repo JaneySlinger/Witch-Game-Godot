@@ -30,3 +30,8 @@ var ingredients = [
 func get_ingredients():
 	return ingredients
 
+
+func get_ingredient_label(item_name):
+	for index in range(ingredients.size()):
+		if ingredients[index]["item_name"] == item_name:
+			return ingredients[index]["label"]
