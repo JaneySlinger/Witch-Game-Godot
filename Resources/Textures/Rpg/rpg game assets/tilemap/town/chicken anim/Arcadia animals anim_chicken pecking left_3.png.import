@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Arcadia animals anim_chicken pecking left_3.png-6bae8fa2c9f7dc05a5e4671484e9044c.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Resources/Textures/Rpg/rpg game assets/tilemap/town/chicken anim/Arcadia animals anim_chicken pecking left_3.png"
+dest_files=[ "res://.import/Arcadia animals anim_chicken pecking left_3.png-6bae8fa2c9f7dc05a5e4671484e9044c.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
