@@ -6,4 +6,6 @@ func interaction_can_interact(_interactionComponentParent : Node) -> bool:
 
 func interaction_interact(_interactionComponentParent : Node) -> void:
 		print("Brewing potion")
-		get_node("../PotionMenu").visible = true
+		get_node("../Witch/CanvasLayer/PotionMenu").visible = true
+		
+		

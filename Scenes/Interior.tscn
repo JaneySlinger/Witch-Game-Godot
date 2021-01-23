@@ -1,13 +1,12 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Resources/interior.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Witch.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/DoorToOutside.gd" type="Script" id=3]
 [ext_resource path="res://Resources/Textures/cauldron_green.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Cauldron.gd" type="Script" id=5]
-[ext_resource path="res://Scenes/PotionMenu.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/CauldronInteract.gd" type="Script" id=8]
+[ext_resource path="res://Resources/Textures/Fireplace-Sheet.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41.0742, 23.6207 )
@@ -57,6 +56,54 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=10]
 radius = 47.7433
 
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 384, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 576, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 768, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 960, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 1152, 0, 192, 192 )
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
 [node name="Interior" type="Node2D"]
 
 [node name="ground" type="TileMap" parent="."]
@@ -89,7 +136,7 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 327687, 6, 0, 327690, 6, 0, 327691, 6, 0, 327694, 7, 0, 327695, 7, 0, 327697, 7, 0, 327698, 7, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327703, 7, 0, 458760, 1, 0, 458763, 2, 1, 524299, 3, 1, 589842, 4, 0, 589843, 4, 0, 589847, 10, 1, 589848, 10, 2, 655382, 2, 2, 720918, 3, 2 )
+tile_data = PoolIntArray( 327687, 6, 0, 327690, 6, 0, 327691, 6, 0, 327694, 7, 0, 327695, 7, 0, 327697, 7, 0, 327702, 7, 0, 327703, 7, 0, 458760, 1, 0, 458763, 2, 1, 524299, 3, 1, 589842, 4, 0, 589843, 4, 0, 589847, 10, 1, 589848, 10, 2, 655382, 2, 2, 720918, 3, 2 )
 
 [node name="Witch" parent="." instance=ExtResource( 2 )]
 position = Vector2( 545.056, 199.311 )
@@ -124,8 +171,10 @@ collision_layer = 3
 position = Vector2( 15.749, 49.137 )
 shape = SubResource( 10 )
 
-[node name="Inventory" parent="." instance=ExtResource( 7 )]
-visible = false
-
-[node name="PotionMenu" parent="." instance=ExtResource( 6 )]
-visible = false
+[node name="Fireplace" type="AnimatedSprite" parent="."]
+position = Vector2( 634.162, 208.1 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 18 )
+animation = "New Anim"
+frame = 2
+playing = true
