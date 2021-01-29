@@ -1,0 +1,153 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Resources/Styles/PurpleBackground.tres" type="StyleBox" id=1]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/strawberry.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/carrot.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/buy.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Styles/BackgroundColour.tres" type="StyleBox" id=5]
+[ext_resource path="res://Resources/Fonts/Cursive.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/mortar.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/money02.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/sell.png" type="Texture" id=9]
+[ext_resource path="res://Resources/Textures/Items/mushroom_blue_1.png" type="Texture" id=10]
+[ext_resource path="res://Resources/Textures/Items/mushroom_orange_2.png" type="Texture" id=11]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/salt.png" type="Texture" id=12]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/honey.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Textures/Items/mushroom_red_2.png" type="Texture" id=14]
+
+[node name="Shop" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1010.0
+margin_bottom = 590.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryPlayer" type="ItemList" parent="Panel"]
+margin_left = 35.0
+margin_top = 72.0
+margin_right = 425.0
+margin_bottom = 502.0
+custom_styles/bg = ExtResource( 5 )
+items = [ "Red Sparkle Mushroom", ExtResource( 14 ), false, "Blue Mushroom", ExtResource( 10 ), false, "Orange Sparkle Mushroom", ExtResource( 11 ), false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryShop" type="ItemList" parent="Panel"]
+margin_left = 575.0
+margin_top = 72.0
+margin_right = 965.0
+margin_bottom = 502.0
+custom_styles/bg = ExtResource( 5 )
+items = [ "Strawberry", ExtResource( 2 ), false, "Carrot", ExtResource( 3 ), false, "Mortar", ExtResource( 7 ), false, "Salt", ExtResource( 12 ), false, "Honey", ExtResource( 13 ), false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SellButton" type="Button" parent="Panel"]
+margin_left = 446.0
+margin_top = 172.0
+margin_right = 553.0
+margin_bottom = 222.0
+text = "Sell -> "
+icon = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyButton" type="Button" parent="Panel"]
+margin_left = 446.218
+margin_top = 266.102
+margin_right = 556.218
+margin_bottom = 319.102
+text = "<- Buy"
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyIcon" type="TextureRect" parent="Panel"]
+margin_left = 118.0
+margin_top = 509.0
+margin_right = 172.0
+margin_bottom = 563.0
+rect_pivot_offset = Vector2( -46, -234 )
+texture = ExtResource( 8 )
+expand = true
+
+[node name="MoneyIcon2" type="TextureRect" parent="Panel"]
+margin_left = 682.598
+margin_top = 506.755
+margin_right = 736.598
+margin_bottom = 560.755
+rect_pivot_offset = Vector2( -46, -234 )
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerMoney" type="Label" parent="Panel"]
+margin_left = 180.653
+margin_top = 518.265
+margin_right = 315.653
+margin_bottom = 552.265
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "10"
+valign = 1
+
+[node name="ShopMoney" type="Label" parent="Panel"]
+margin_left = 752.0
+margin_top = 517.0
+margin_right = 891.0
+margin_bottom = 551.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+valign = 1
+
+[node name="PlayerInvLabel" type="Label" parent="Panel"]
+margin_left = 72.9601
+margin_top = 5.6123
+margin_right = 359.96
+margin_bottom = 65.6123
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Your Inventory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopInvLabel" type="Label" parent="Panel"]
+margin_left = 630.824
+margin_top = 6.73476
+margin_right = 917.824
+margin_bottom = 66.7348
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Shop Inventory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Amount" type="Label" parent="Panel"]
+margin_left = 453.0
+margin_top = 230.287
+margin_right = 548.0
+margin_bottom = 259.287
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "10"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
