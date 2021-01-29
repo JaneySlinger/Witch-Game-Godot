@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Resources/Styles/PurpleBackground.tres" type="StyleBox" id=1]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/strawberry.png" type="Texture" id=2]
@@ -14,10 +14,12 @@
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/salt.png" type="Texture" id=12]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/honey.png" type="Texture" id=13]
 [ext_resource path="res://Resources/Textures/Items/mushroom_red_2.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Shop.gd" type="Script" id=15]
 
 [node name="Shop" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
