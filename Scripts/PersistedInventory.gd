@@ -1,33 +1,43 @@
 extends Node
 
-var items = []
-signal item_added(label, item_name)
-signal item_removed(label)
+var playerInv = []
+var shop01 = []
+signal item_added(inv, label, item_name, price)
+signal item_removed(inv, label)
 
-func add_item(label, item_name):
-	items.append({
+func map_to_inventory(inv):
+	if inv == "playerInv": return playerInv
+	if inv == "shop01": return shop01
+
+func add_item(inv, label, item_name, price):
+	var mapped_inv = map_to_inventory(inv)
+	mapped_inv.append({
 		"label": label,
-		"item_name": item_name
+		"item_name": item_name,
+		"price": price
 		})
-	emit_signal("item_added", label, item_name)
-	print(items)
+	emit_signal("item_added", inv, label, item_name)
+	print(mapped_inv)
 	
-func remove_item(label, item_name):
-	for index in range(items.size()):
-		if(items[index]["item_name"] == item_name):
-			items.remove(index)
+func remove_item(inv, label, item_name):
+	var mapped_inv = map_to_inventory(inv)
+	for index in range(mapped_inv.size()):
+		if(mapped_inv[index]["item_name"] == item_name):
+			mapped_inv.remove(index)
 			break
-	emit_signal("item_removed", label)
-	print(items)
+	emit_signal("item_removed", inv, label)
+	print(mapped_inv)
 	
-func isItemInInventory(item_name):
-	for item in items:
-		if item["item_name"] == item_name:
+func isItemInInventory(inv, item_name):
+	var mapped_inv = map_to_inventory(inv)
+	for item in mapped_inv:
+		if mapped_inv["item_name"] == item_name:
 			return true
 	return false
 
-func allItemsInInventory(required_items):
-	var copied_inventory = items.duplicate(true)
+func allItemsInInventory(inv, required_items):
+	var mapped_inv = map_to_inventory(inv)
+	var copied_inventory = mapped_inv.duplicate(true)
 	var itemsPresent = 0
 	for item_name in required_items:
 		#is the item in the copied inventory

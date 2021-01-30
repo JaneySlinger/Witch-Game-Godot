@@ -12,6 +12,7 @@ onready var potions = GlobalPotions.get_potions()
 var currentPotionName
 var currentPotionIconRef
 var currentPotionIngredients
+var currentPotionPrice = 5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -56,13 +57,7 @@ func clearIngredientTextures():
 		get_node("Panel2/GridContainer/Ingredient" + String(index + 1)).texture = null
 	
 func canBrewPotion():
-	return PersistedInventory.allItemsInInventory(currentPotionIngredients)
-	#for item_name in currentPotionIngredients:
-		#if !PersistedInventory.isItemInInventory(item_name):
-			#print(item_name + " is not in the inventory")
-			#return false
-	#print("All required items are in the inventory")
-	#return true
+	return PersistedInventory.allItemsInInventory("playerInv", currentPotionIngredients)
 	
 
 func _on_BrewButton_pressed():
@@ -70,8 +65,8 @@ func _on_BrewButton_pressed():
 	if(canBrewPotion()):
 		for ingredient_name in currentPotionIngredients:
 			#get the item index in the globalIngredients file to get the label
-			PersistedInventory.remove_item(GlobalIngredients.get_ingredient_label(ingredient_name), ingredient_name)
-		PersistedInventory.add_item(currentPotionName, currentPotionIconRef)
+			PersistedInventory.remove_item("playerInv", GlobalIngredients.get_ingredient_label(ingredient_name), ingredient_name)
+		PersistedInventory.add_item("playerInv", currentPotionName, currentPotionIconRef, currentPotionPrice)
 	
 	
 	

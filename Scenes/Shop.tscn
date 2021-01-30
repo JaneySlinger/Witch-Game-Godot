@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Resources/Styles/PurpleBackground.tres" type="StyleBox" id=1]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/strawberry.png" type="Texture" id=2]
@@ -9,12 +9,9 @@
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/mortar.png" type="Texture" id=7]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/money02.png" type="Texture" id=8]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/sell.png" type="Texture" id=9]
-[ext_resource path="res://Resources/Textures/Items/mushroom_blue_1.png" type="Texture" id=10]
-[ext_resource path="res://Resources/Textures/Items/mushroom_orange_2.png" type="Texture" id=11]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/salt.png" type="Texture" id=12]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/honey.png" type="Texture" id=13]
-[ext_resource path="res://Resources/Textures/Items/mushroom_red_2.png" type="Texture" id=14]
-[ext_resource path="res://Scenes/Shop.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/Shop.gd" type="Script" id=15]
 
 [node name="Shop" type="Control"]
 anchor_right = 1.0
@@ -40,7 +37,6 @@ margin_top = 72.0
 margin_right = 425.0
 margin_bottom = 502.0
 custom_styles/bg = ExtResource( 5 )
-items = [ "Red Sparkle Mushroom", ExtResource( 14 ), false, "Blue Mushroom", ExtResource( 10 ), false, "Orange Sparkle Mushroom", ExtResource( 11 ), false ]
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -153,3 +149,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="item_selected" from="Panel/InventoryPlayer" to="." method="_on_InventoryPlayer_item_selected"]
+[connection signal="item_selected" from="Panel/InventoryShop" to="." method="_on_InventoryShop_item_selected"]
+[connection signal="pressed" from="Panel/SellButton" to="." method="_on_SellButton_pressed"]
+[connection signal="pressed" from="Panel/BuyButton" to="." method="_on_BuyButton_pressed"]
