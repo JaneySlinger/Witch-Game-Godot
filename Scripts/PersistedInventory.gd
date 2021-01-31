@@ -4,6 +4,8 @@ var playerInv = []
 var shop01 = []
 signal item_added(inv, label, item_name, price)
 signal item_removed(inv, label)
+var playerMoney = 0
+var shopMoney = 100
 
 func map_to_inventory(inv):
 	if inv == "playerInv": return playerInv
@@ -50,3 +52,12 @@ func allItemsInInventory(inv, required_items):
 	else:
 		return false
 		
+func addMoney(wallet, price):
+	wallet += price
+	print (shopMoney)
+	print (playerMoney)
+
+func subMoney(wallet, price):
+	wallet -= price
+	print(shopMoney)
+	print(playerMoney)

@@ -112,6 +112,9 @@ margin_bottom = 551.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100"
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PlayerInvLabel" type="Label" parent="Panel"]
 margin_left = 72.9601
