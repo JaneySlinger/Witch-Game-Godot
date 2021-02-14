@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Dialogue.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.707092
+margin_right = -0.707092
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextPanel" type="Panel" parent="."]
+margin_left = 155.141
+margin_top = 446.56
+margin_right = 679.141
+margin_bottom = 577.56
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NPCText" type="RichTextLabel" parent="TextPanel"]
+margin_left = 13.8591
+margin_top = 7.55945
+margin_right = 514.859
+margin_bottom = 124.559
+text = "Text"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Template" type="Button" parent="."]
+visible = false
+margin_left = 688.665
+margin_top = 525.67
+margin_right = 894.665
+margin_bottom = 575.67
+text = "Template option button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NamePanel" type="Panel" parent="."]
+margin_left = 155.0
+margin_top = 431.0
+margin_right = 277.0
+margin_bottom = 447.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NPCName" type="Label" parent="NamePanel"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
