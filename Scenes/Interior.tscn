@@ -147,14 +147,14 @@ tile_data = PoolIntArray( 327694, 9, 2, 327695, 9, 2, 327696, 9, 1, 327697, 9, 2
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 1703981, 3, 0 )
+tile_data = PoolIntArray( 1703981, 3, 1 )
 
 [node name="Furniture" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 524318, 2, 1, 589852, 0, 0, 655390, 3, 1, 1114154, 7, 0, 1114156, 7, 0, 1114158, 7, 0, 1114160, 7, 0, 1572909, 2, 0 )
+tile_data = PoolIntArray( 524318, 2, 1, 589852, 0, 0, 655390, 3, 1, 1114154, 7, 0, 1114156, 7, 0, 1114158, 7, 0, 1114160, 7, 0, 1507371, 10, 0, 1572909, 2, 1 )
 
 [node name="Fireplace2" type="StaticBody2D" parent="."]
 
@@ -163,7 +163,7 @@ position = Vector2( 640, 160 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 8 )
 animation = "New Anim"
-frame = 1
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fireplace2"]
