@@ -10,9 +10,9 @@ onready var NPCText = get_node("TextPanel/NPCText")
 onready var NPCName = get_node("NamePanel/NPCName")
 onready var Shop = get_node("../Shop")
 
-func _ready():
+func open_dialogue(dialogue_file):
 	parser = WhiskersParser.new()
-	var dialogue_data = parser.open_whiskers("res://Scripts/Dialogue/shopkeeper.json")
+	var dialogue_data = parser.open_whiskers(dialogue_file)
 	block = parser.start_dialogue(dialogue_data)
 	set_npc_name(dialogue_data.info.display_name)
 	next()
@@ -20,6 +20,7 @@ func _ready():
 func next():
 	clear_buttons()
 	if block:
+		print("block is here ")
 		NPCText.parse_bbcode(block.text)	#sets the main block of text
 		for option in block.options:
 			add_button(option)
@@ -44,6 +45,7 @@ func _process(delta):
 	if buttonFired:
 		timer = 0
 		buttonFired = false
+	
 
 func add_button(data):
 	var node = Button.new()
