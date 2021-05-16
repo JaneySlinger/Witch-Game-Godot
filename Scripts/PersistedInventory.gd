@@ -6,6 +6,9 @@ signal item_added(inv, label, item_name, price)
 signal item_removed(inv, label)
 var playerMoney = 0
 var shopMoney = 100
+var hour = 6
+var minutes = 30
+var day = 1
 
 func map_to_inventory(inv):
 	if inv == "playerInv": return playerInv
