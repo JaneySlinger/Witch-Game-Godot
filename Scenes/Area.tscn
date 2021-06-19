@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=97 format=2]
 
 [ext_resource path="res://Resources/customeTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Scripts/Cat.gd" type="Script" id=2]
@@ -16,6 +16,11 @@
 [ext_resource path="res://Resources/test_trees.tres" type="TileSet" id=14]
 [ext_resource path="res://Scenes/Buildings.gd" type="Script" id=15]
 [ext_resource path="res://Scripts/NPC.gd" type="Script" id=16]
+[ext_resource path="res://Resources/Textures/Rpg/rpg game assets/tilemap/town/questBoard.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/QuestBoard.gd" type="Script" id=18]
+
+[sub_resource type="RectangleShape2D" id=78]
+extents = Vector2( 47.4746, 29.7558 )
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -68,203 +73,203 @@ animations = [ {
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 256, 256, 256 )
+region = Rect2( 0, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 256, 256, 256 )
+region = Rect2( 256, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 256, 256, 256 )
+region = Rect2( 512, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 256, 256, 256 )
+region = Rect2( 768, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 256, 256, 256 )
+region = Rect2( 0, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 256, 256, 256 )
+region = Rect2( 256, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 256, 256, 256 )
+region = Rect2( 512, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 256, 256, 256 )
+region = Rect2( 768, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 768, 256, 256 )
+region = Rect2( 0, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 768, 256, 256 )
+region = Rect2( 256, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 768, 256, 256 )
+region = Rect2( 512, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 768, 256, 256 )
+region = Rect2( 768, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 512, 256, 256 )
+region = Rect2( 0, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 512, 256, 256 )
+region = Rect2( 256, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 512, 256, 256 )
+region = Rect2( 512, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 512, 256, 256 )
+region = Rect2( 768, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 768, 256, 256 )
+region = Rect2( 0, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 768, 256, 256 )
+region = Rect2( 256, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 768, 256, 256 )
+region = Rect2( 512, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 768, 256, 256 )
+region = Rect2( 768, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 512, 256, 256 )
+region = Rect2( 0, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 512, 256, 256 )
+region = Rect2( 256, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 512, 256, 256 )
+region = Rect2( 512, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 512, 256, 256 )
+region = Rect2( 768, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 256, 256 )
+region = Rect2( 0, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 0, 256, 256 )
+region = Rect2( 256, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 0, 256, 256 )
+region = Rect2( 512, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 0, 256, 256 )
+region = Rect2( 768, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 256, 256 )
+region = Rect2( 0, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 0, 256, 256 )
+region = Rect2( 256, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 0, 256, 256 )
+region = Rect2( 512, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=41]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 0, 256, 256 )
+region = Rect2( 768, 512, 256, 256 )
 
 [sub_resource type="SpriteFrames" id=42]
 animations = [ {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
-"name": "walk_right",
+"name": "walk_up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
-"name": "idle_right",
+"name": "idle_up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "idle_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
 "loop": true,
-"name": "walk_left",
+"name": "idle_down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
 "loop": true,
-"name": "idle_up",
+"name": "walk_down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
 "loop": true,
-"name": "idle_left",
+"name": "walk_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
 "loop": true,
-"name": "idle_down",
+"name": "walk_left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
 "loop": true,
-"name": "walk_down",
+"name": "idle_left",
 "speed": 5.0
 } ]
 
@@ -446,6 +451,7 @@ radius = 14.2534
 height = 15.5539
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 1563.59, 259.85 )
 
 [node name="Ground" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -519,11 +525,23 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -196476, 31, 0, -196474, 37, 0, -196472, 37, 0, -196470, 37, 0, -196468, 37, 0, -196466, 37, 0, -196464, 37, 0, -196462, 37, 0, -196460, 37, 0, -196458, 37, 0, -196456, 37, 0, -196454, 37, 0, -196452, 37, 0, -196450, 37, 0, -196448, 37, 0, -196446, 37, 0, -196444, 37, 0, -196442, 37, 0, -196440, 37, 0, -196438, 37, 0, -196436, 37, 0, -196434, 46, 0, -196432, 45, 0, -196430, 44, 0, -196428, 43, 0, -196427, 27, 0, -196421, 37, 0, -196419, 37, 0, -196417, 25, 0, -196415, 24, 0, -196413, 30, 0, -130887, 34, 0, -65404, 40, 0, -65350, 35, 0, -65341, 39, 0, 185, 36, 0, 65668, 40, 0, 65731, 39, 0, 196740, 40, 0, 196803, 39, 0, 327812, 40, 0, 327875, 39, 0, 458884, 40, 0, 458947, 39, 0, 589956, 40, 0, 590019, 39, 0, 655499, 7, 0, 655505, 9, 0, 655507, 9, 0, 655513, 6, 0, 655515, 6, 0, 655516, 6, 0, 655521, 7, 0, 655523, 7, 0, 655531, 9, 0, 721028, 40, 0, 721050, 15, 0, 721052, 15, 0, 721091, 39, 0, 852100, 40, 0, 852122, 0, 0, 852163, 39, 0, 983172, 41, 0, 983235, 39, 0, 1048728, 12, 0, 1048734, 12, 0, 1114266, 58, 0, 1114307, 39, 0, 1245379, 39, 0, 1376410, 15, 0, 1376412, 15, 0, 1376451, 39, 0, 1507523, 39, 0, 1638595, 39, 0, 1769667, 39, 0, 1835151, 12, 0, 1835163, 11, 0, 1835174, 19, 0, 1835175, 1, 2, 1835176, 1, 3, 1900710, 2, 3, 1900712, 2, 1, 1900739, 39, 0, 1966223, 12, 0, 1966235, 11, 0, 2031811, 39, 0, 2162838, 17, 0, 2162839, 1, 6, 2162840, 1, 7, 2162850, 18, 0, 2162851, 1, 1, 2162883, 39, 0, 2228374, 1, 2, 2228376, 1, 6, 2228386, 1, 4, 2228388, 1, 3, 2293955, 39, 0, 2359423, 55, 0, 2359447, 20, 0, 2425027, 39, 0, 2556099, 39, 0, 2687171, 39, 0, 2752661, 9, 0, 2752663, 60, 0, 2752673, 9, 0, 2752675, 10, 0, 2818197, 10, 0, 2818243, 39, 0, 2883733, 10, 0, 2883736, 15, 0, 2883738, 15, 0, 2883747, 10, 0, 2949315, 39, 0, 3014805, 10, 0, 3014819, 10, 0, 3080387, 39, 0, 3145877, 10, 0, 3145891, 10, 0, 3211459, 39, 0, 3276949, 9, 0, 3276951, 9, 0, 3276953, 9, 0, 3276955, 9, 0, 3276957, 9, 0, 3276959, 9, 0, 3276961, 9, 0, 3276962, 9, 0, 3342468, 42, 0, 3342531, 39, 0, 3473540, 40, 0, 3473603, 39, 0, 3604612, 40, 0, 3604675, 39, 0, 3670177, 51, 0, 3670207, 49, 0, 3735684, 40, 0, 3735745, 48, 0, 3735747, 41, 0, 3866756, 40, 0, 3866819, 35, 0, 3932356, 34, 0, 3997828, 40, 0, 3997891, 39, 0, 4128900, 40, 0, 4128963, 39, 0, 4259972, 40, 0, 4260035, 39, 0, 4391044, 40, 0, 4391107, 39, 0, 4456582, 56, 0, 4522116, 40, 0, 4522179, 39, 0, 4587682, 20, 0, 4653188, 40, 0, 4653194, 49, 0, 4653230, 55, 0, 4653251, 39, 0, 4718728, 48, 0, 4784260, 40, 0, 4784323, 39, 0, 4915332, 32, 0, 4915334, 24, 0, 4915336, 37, 0, 4915338, 37, 0, 4915339, 37, 0, 4915341, 24, 0, 4915343, 37, 0, 4915345, 37, 0, 4915347, 37, 0, 4915349, 37, 0, 4915351, 37, 0, 4915353, 37, 0, 4915355, 37, 0, 4915357, 46, 0, 4915359, 46, 0, 4915361, 46, 0, 4915373, 43, 0, 4915375, 44, 0, 4915377, 45, 0, 4915379, 37, 0, 4915381, 37, 0, 4915383, 37, 0, 4915385, 37, 0, 4915387, 37, 0, 4915389, 37, 0, 4915391, 37, 0, 4915393, 37, 0, 4915395, 33, 0, 4980898, 60, 0 )
 
+[node name="QuestBoard" type="StaticBody2D" parent="."]
+position = Vector2( 2784.2, 274.257 )
+script = ExtResource( 18 )
+
+[node name="QuestBoardSprite" type="Sprite" parent="QuestBoard"]
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestBoard"]
+position = Vector2( 0.560547, -8.69904 )
+z_index = 1
+shape = SubResource( 78 )
+
 [node name="Fountain" type="AnimatedSprite" parent="."]
 position = Vector2( 2238.7, 681.651 )
 frames = SubResource( 9 )
 animation = "New Anim"
-frame = 6
+frame = 5
 playing = true
 
 [node name="Witch" parent="." instance=ExtResource( 4 )]
@@ -601,7 +619,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Merchant" type="AnimatedSprite" parent="Merchant"]
 position = Vector2( 2367.67, 540.447 )
 frames = SubResource( 53 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Merchant"]
@@ -615,7 +633,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Farmer" type="AnimatedSprite" parent="Farmer"]
 position = Vector2( 2560.54, 536.478 )
 frames = SubResource( 65 )
-frame = 9
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Farmer"]
@@ -629,7 +647,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="MagicMerchant" type="AnimatedSprite" parent="Magic Merchant"]
 position = Vector2( 2717.82, 492.093 )
 frames = SubResource( 76 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Magic Merchant"]
