@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Fonts/Cursive.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Styles/LighterBackground.tres" type="StyleBox" id=2]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/coin.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Textures/Items/potion_green.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Textures/Items/potion_purple.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/heart.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/treasure.png" type="Texture" id=7]
+
+[node name="QuestNote" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -719.0
+margin_bottom = -423.0
+rect_min_size = Vector2( 305, 177 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 305.0
+margin_bottom = 177.0
+rect_min_size = Vector2( 305, 177 )
+custom_styles/panel = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="RichTextLabel" parent="Panel"]
+margin_left = 4.75255
+margin_top = 1.74915
+margin_right = 295.753
+margin_bottom = 51.7492
+custom_fonts/normal_font = ExtResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Fly Me to the Moon"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RequirementsGrid" type="GridContainer" parent="Panel"]
+margin_left = 4.97355
+margin_top = 73.5214
+margin_right = 72.9735
+margin_bottom = 113.521
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/RequirementsGrid"]
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/RequirementsGrid"]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+texture = ExtResource( 5 )
+
+[node name="RequirementsLabel" type="Label" parent="Panel"]
+margin_left = 5.24406
+margin_top = 56.1865
+margin_right = 99.2441
+margin_bottom = 70.1865
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Requirements:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RewardsLabel" type="Label" parent="Panel"]
+margin_left = 5.58626
+margin_top = 113.073
+margin_right = 58.5863
+margin_bottom = 127.073
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Rewards"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RewardsGrid" type="GridContainer" parent="Panel"]
+margin_left = 6.4758
+margin_top = 130.669
+margin_right = 110.476
+margin_bottom = 170.669
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/RewardsGrid"]
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/RewardsGrid"]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+texture = ExtResource( 6 )
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/RewardsGrid"]
+margin_left = 72.0
+margin_right = 104.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Accept" type="Button" parent="Panel"]
+margin_left = 194.292
+margin_top = 122.117
+margin_right = 287.292
+margin_bottom = 158.117
+text = "Accept"
+__meta__ = {
+"_edit_use_anchors_": false
+}

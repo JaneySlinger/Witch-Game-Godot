@@ -1,7 +1,7 @@
 extends KinematicBody2D
 class_name Witch
 
-var speed = 150
+export var speed = 150
 var movedir = Vector2()
 const UP = Vector2(0, -1)
 const DOWN = Vector2(0, 1)

@@ -1,4 +1,7 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/QuestNote.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Styles/BackgroundColour.tres" type="StyleBox" id=2]
 
 [node name="QuestBoard" type="Control"]
 margin_right = 40.0
@@ -7,6 +10,70 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Test" type="Panel" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1020.0
+margin_bottom = 593.0
+custom_styles/panel = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+margin_right = 1021.0
+margin_bottom = 592.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Panel/CenterContainer"]
+margin_left = 49.0
+margin_top = 117.0
+margin_right = 972.0
+margin_bottom = 475.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestNote4" parent="Panel/CenterContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 305.0
+margin_bottom = 177.0
+
+[node name="QuestNote" parent="Panel/CenterContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 309.0
+margin_right = 614.0
+margin_bottom = 177.0
+
+[node name="QuestNote2" parent="Panel/CenterContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 618.0
+margin_right = 923.0
+margin_bottom = 177.0
+
+[node name="QuestNote3" parent="Panel/CenterContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 181.0
+margin_right = 305.0
+margin_bottom = 358.0
+
+[node name="QuestNote5" parent="Panel/CenterContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 309.0
+margin_top = 181.0
+margin_right = 614.0
+margin_bottom = 358.0
+
+[node name="QuestNote6" parent="Panel/CenterContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 618.0
+margin_top = 181.0
+margin_right = 923.0
+margin_bottom = 358.0
