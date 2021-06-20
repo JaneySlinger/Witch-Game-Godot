@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Resources/Fonts/Cursive.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/SmallCursive.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Resources/Styles/LighterBackground.tres" type="StyleBox" id=2]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/coin.png" type="Texture" id=3]
-[ext_resource path="res://Resources/Textures/Items/potion_green.png" type="Texture" id=4]
-[ext_resource path="res://Resources/Textures/Items/potion_purple.png" type="Texture" id=5]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/heart.png" type="Texture" id=6]
 [ext_resource path="res://Resources/Textures/Shikashi's Texture Pack Subset/treasure.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/QuestNote.gd" type="Script" id=8]
 
 [node name="QuestNote" type="Control"]
 anchor_right = 1.0
@@ -14,6 +13,7 @@ anchor_bottom = 1.0
 margin_right = -719.0
 margin_bottom = -423.0
 rect_min_size = Vector2( 305, 177 )
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -28,43 +28,35 @@ __meta__ = {
 }
 
 [node name="NameLabel" type="RichTextLabel" parent="Panel"]
-margin_left = 4.75255
-margin_top = 1.74915
-margin_right = 295.753
-margin_bottom = 51.7492
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 296.0
+margin_bottom = 90.0
 custom_fonts/normal_font = ExtResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-text = "Fly Me to the Moon"
+bbcode_enabled = true
+bbcode_text = "[center] name [center]"
+text = " name "
+fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RequirementsGrid" type="GridContainer" parent="Panel"]
-margin_left = 4.97355
-margin_top = 73.5214
-margin_right = 72.9735
-margin_bottom = 113.521
+margin_left = 3.85111
+margin_top = 84.0697
+margin_right = 71.8511
+margin_bottom = 124.069
 columns = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="Panel/RequirementsGrid"]
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 4 )
-
-[node name="TextureRect2" type="TextureRect" parent="Panel/RequirementsGrid"]
-margin_left = 36.0
-margin_right = 68.0
-margin_bottom = 32.0
-texture = ExtResource( 5 )
-
 [node name="RequirementsLabel" type="Label" parent="Panel"]
-margin_left = 5.24406
-margin_top = 56.1865
-margin_right = 99.2441
-margin_bottom = 70.1865
+margin_left = 3.91757
+margin_top = 67.4746
+margin_right = 97.9176
+margin_bottom = 81.4746
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Requirements:"
 __meta__ = {
@@ -72,10 +64,10 @@ __meta__ = {
 }
 
 [node name="RewardsLabel" type="Label" parent="Panel"]
-margin_left = 5.58626
-margin_top = 113.073
-margin_right = 58.5863
-margin_bottom = 127.073
+margin_left = 4.64238
+margin_top = 122.652
+margin_right = 57.6424
+margin_bottom = 136.652
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Rewards"
 __meta__ = {
@@ -83,37 +75,37 @@ __meta__ = {
 }
 
 [node name="RewardsGrid" type="GridContainer" parent="Panel"]
-margin_left = 6.4758
-margin_top = 130.669
-margin_right = 110.476
-margin_bottom = 170.669
+margin_left = 5.35336
+margin_top = 136.587
+margin_right = 109.354
+margin_bottom = 176.587
 columns = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="Panel/RewardsGrid"]
+[node name="MoneyIcon" type="TextureRect" parent="Panel/RewardsGrid"]
 margin_right = 32.0
 margin_bottom = 32.0
 texture = ExtResource( 3 )
 
-[node name="TextureRect2" type="TextureRect" parent="Panel/RewardsGrid"]
+[node name="SocialIcon" type="TextureRect" parent="Panel/RewardsGrid"]
 margin_left = 36.0
 margin_right = 68.0
 margin_bottom = 32.0
 texture = ExtResource( 6 )
 
-[node name="TextureRect3" type="TextureRect" parent="Panel/RewardsGrid"]
+[node name="SpecialIcon" type="TextureRect" parent="Panel/RewardsGrid"]
 margin_left = 72.0
 margin_right = 104.0
 margin_bottom = 32.0
 texture = ExtResource( 7 )
 
 [node name="Accept" type="Button" parent="Panel"]
-margin_left = 194.292
-margin_top = 122.117
-margin_right = 287.292
-margin_bottom = 158.117
+margin_left = 196.652
+margin_top = 136.275
+margin_right = 289.652
+margin_bottom = 172.275
 text = "Accept"
 __meta__ = {
 "_edit_use_anchors_": false

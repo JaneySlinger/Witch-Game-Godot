@@ -101,3 +101,8 @@ var potions = [
 
 func get_potions():
 	return potions
+	
+func get_potion_icon(potion_name):
+	for potion in potions:
+		if potion["name"] == potion_name:
+			return potion["icon"] 

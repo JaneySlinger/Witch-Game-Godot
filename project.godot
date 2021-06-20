@@ -35,6 +35,7 @@ config/icon="res://Resources/Textures/icon.png"
 PersistedInventory="*res://Scripts/PersistedInventory.gd"
 GlobalPotions="*res://Scripts/GlobalPotions.gd"
 GlobalIngredients="*res://Scripts/GlobalIngredients.gd"
+GlobalQuests="*res://Scripts/GlobalQuests.gd"
 
 [display]
 
