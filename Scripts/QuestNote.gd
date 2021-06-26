@@ -32,3 +32,8 @@ func set_requirements():
 	
 func get_quest_info():
 	current_quest = GlobalQuests.get_quest_by_name(quest_name)
+
+
+func _on_Accept_pressed():
+	print (quest_name)
+	PersistedInventory.add_quest(quest_name)

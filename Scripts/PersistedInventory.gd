@@ -2,13 +2,21 @@ extends Node
 
 var playerInv = []
 var shop01 = []
+var playerQuests = []
 signal item_added(inv, label, item_name, price)
 signal item_removed(inv, label)
+signal quest_added(quest_name)
+signal quest_removed(quest_name)
 var playerMoney = 0
 var shopMoney = 100
 var hour = 6
 var minutes = 30
 var day = 1
+
+func add_quest(quest_name):
+	playerQuests.append(quest_name)
+	print (playerQuests)
+	emit_signal("quest_added", quest_name)
 
 func map_to_inventory(inv):
 	if inv == "playerInv": return playerInv
