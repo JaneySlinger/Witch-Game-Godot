@@ -1,178 +1,532 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Resources/interior.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Witch.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/DoorToOutside.gd" type="Script" id=3]
 [ext_resource path="res://Resources/Textures/cauldron_green.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Cauldron.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Textures/Magical Interiors/CBL(indoors- base assets, magical stuff, tavern, inn_updated_5)/32x32/animatedFireplace_4Frames-export.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Textures/Magical Interiors/CBL(indoors- base assets, magical stuff, tavern, inn_updated_5)/32x32/packedSpriteSheet_wallsAndFloors-export.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/CauldronInteract.gd" type="Script" id=8]
 [ext_resource path="res://Resources/Textures/Fireplace-Sheet.png" type="Texture" id=9]
+[ext_resource path="res://Resources/Textures/Magical Interiors/CBL(indoors- base assets, magical stuff, tavern, inn_updated_5)/32x32/animatedCauldrons_8Frames-export.png" type="Texture" id=10]
 
-[sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 192, 192 )
+[sub_resource type="TileSet" id=1]
+0/name = "packedSpriteSheet_wallsAndFloors-export.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 192, 32, 544, 96 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 96 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "packedSpriteSheet_wallsAndFloors-export.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 768, 32, 224, 96 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 96 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "packedSpriteSheet_wallsAndFloors-export.png 2"
+2/texture = ExtResource( 7 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 864, 160, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "packedSpriteSheet_wallsAndFloors-export.png 3"
+3/texture = ExtResource( 7 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 896, 160, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "packedSpriteSheet_wallsAndFloors-export.png 4"
+4/texture = ExtResource( 7 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 96, 160, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "packedSpriteSheet_wallsAndFloors-export.png 5"
+5/texture = ExtResource( 7 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 32, 192, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "packedSpriteSheet_wallsAndFloors-export.png 6"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 32, 224, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "packedSpriteSheet_wallsAndFloors-export.png 7"
+7/texture = ExtResource( 7 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 32, 256, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "packedSpriteSheet_wallsAndFloors-export.png 8"
+8/texture = ExtResource( 7 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 64, 256, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "packedSpriteSheet_wallsAndFloors-export.png 9"
+9/texture = ExtResource( 7 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 96, 256, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "packedSpriteSheet_wallsAndFloors-export.png 10"
+10/texture = ExtResource( 7 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 96, 288, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "packedSpriteSheet_wallsAndFloors-export.png 11"
+11/texture = ExtResource( 7 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 128, 288, 32, 32 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "packedSpriteSheet_wallsAndFloors-export.png 12"
+12/texture = ExtResource( 7 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 160, 288, 32, 32 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "packedSpriteSheet_wallsAndFloors-export.png 13"
+13/texture = ExtResource( 7 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 160, 256, 32, 32 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "packedSpriteSheet_wallsAndFloors-export.png 14"
+14/texture = ExtResource( 7 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 192, 256, 32, 32 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "packedSpriteSheet_wallsAndFloors-export.png 15"
+15/texture = ExtResource( 7 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 224, 256, 32, 32 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "packedSpriteSheet_wallsAndFloors-export.png 16"
+16/texture = ExtResource( 7 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 224, 224, 32, 32 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "packedSpriteSheet_wallsAndFloors-export.png 17"
+17/texture = ExtResource( 7 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 224, 192, 32, 32 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "packedSpriteSheet_wallsAndFloors-export.png 18"
+18/texture = ExtResource( 7 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 416, 160, 96, 96 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "packedSpriteSheet_wallsAndFloors-export.png 19"
+19/texture = ExtResource( 7 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 512, 160, 96, 96 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 192, 0, 192, 192 )
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 384, 0, 192, 192 )
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 576, 0, 192, 192 )
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 768, 0, 192, 192 )
+atlas = ExtResource( 6 )
+region = Rect2( 288, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 9 )
-region = Rect2( 960, 0, 192, 192 )
+region = Rect2( 0, 0, 192, 192 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 9 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 384, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 576, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 768, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 960, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 9 )
 region = Rect2( 1152, 0, 192, 192 )
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=13]
 animations = [ {
 "frames": [  ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "MagicalInteriorFirePlace",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
 "name": "New Anim",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 72, 66.5 )
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 97.7197, 63.9317 )
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 41.0742, 23.6207 )
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 54.2819, 25.1887 )
 
-[sub_resource type="CapsuleShape2D" id=11]
-radius = 15.8763
-height = 9.59442
+[sub_resource type="CapsuleShape2D" id=16]
+radius = 19.2389
+height = 19.149
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=29]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 32, 64 )
+atlas = ExtResource( 10 )
+region = Rect2( 0, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=30]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 32, 0, 32, 64 )
+atlas = ExtResource( 10 )
+region = Rect2( 64, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=31]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 64, 0, 32, 64 )
+atlas = ExtResource( 10 )
+region = Rect2( 128, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=32]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 96, 0, 32, 64 )
+atlas = ExtResource( 10 )
+region = Rect2( 192, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=33]
 flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 128, 0, 32, 64 )
+atlas = ExtResource( 10 )
+region = Rect2( 256, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 320, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 384, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 448, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 4 )
 region = Rect2( 160, 0, 32, 64 )
 
-[sub_resource type="SpriteFrames" id=18]
+[sub_resource type="SpriteFrames" id=23]
 animations = [ {
-"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
 "loop": true,
 "name": "green",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "green_old",
+"speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=19]
-radius = 47.7433
-
-[sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 122.476, 30.1662 )
-
-[sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 10, 245.182 )
-
-[sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 23.4064, 221.561 )
-
-[sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 82.5912, 46.5175 )
+[sub_resource type="CircleShape2D" id=24]
+radius = 55.6213
 
 [node name="Interior" type="Node2D"]
 
-[node name="ground" type="TileMap" parent="."]
+[node name="Floor" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 327694, 9, 6, 327695, 9, 6, 327696, 9, 4, 327697, 9, 6, 327698, 9, 6, 327699, 9, 6, 327700, 9, 6, 327701, 9, 6, 327702, 9, 4, 327703, 9, 6, 327704, 9, 6, 393230, 9, 6, 393231, 9, 6, 393232, 9, 6, 393233, 9, 6, 393234, 9, 6, 393235, 9, 6, 393236, 9, 6, 393237, 9, 6, 393238, 9, 6, 393239, 9, 6, 393240, 9, 6, 458766, 9, 6, 458767, 9, 6, 458768, 9, 6, 458769, 9, 6, 458770, 9, 6, 458771, 9, 6, 458772, 9, 6, 458773, 9, 6, 458774, 9, 6, 458775, 9, 6, 458776, 9, 6, 524302, 9, 6, 524303, 9, 6, 524304, 9, 6, 524305, 9, 6, 524306, 9, 6, 524307, 9, 6, 524308, 9, 6, 524309, 9, 6, 524310, 9, 6, 524311, 9, 6, 524312, 9, 6, 589838, 9, 6, 589839, 9, 6, 589840, 9, 6, 589841, 9, 6, 589842, 9, 6, 589843, 9, 6, 589844, 9, 6, 589845, 9, 6, 589846, 9, 6, 589847, 9, 6, 589848, 9, 6, 655374, 9, 6, 655375, 9, 6, 655376, 9, 6, 655377, 9, 6, 655378, 9, 6, 655379, 9, 6, 655380, 9, 6, 655381, 9, 6, 655382, 9, 6, 655383, 9, 6, 655384, 9, 6, 720910, 9, 6, 720911, 9, 6, 720912, 9, 6, 720913, 9, 6, 720914, 9, 6, 720915, 9, 6, 720916, 9, 6, 720917, 9, 6, 720918, 9, 6, 720919, 9, 6, 720920, 9, 6, 786446, 9, 6, 786447, 9, 6, 786448, 9, 6, 786449, 9, 6, 786450, 9, 6, 786451, 9, 6, 786452, 9, 6, 786453, 9, 6, 786454, 9, 6, 786455, 9, 6, 786456, 9, 6, 851982, 9, 6, 851983, 9, 6, 851984, 9, 6, 851985, 9, 6, 851986, 9, 6, 851987, 9, 6, 851988, 9, 6, 851989, 9, 6, 851990, 9, 6, 851991, 9, 6, 851992, 9, 6, 917518, 9, 6, 917519, 9, 6, 917520, 9, 6, 917521, 9, 6, 917522, 9, 6, 917523, 9, 6, 917524, 9, 6, 917525, 9, 6, 917526, 9, 6, 917527, 9, 6, 917528, 9, 6, 983059, 9, 6, 983060, 9, 6, 1048595, 9, 6, 1048596, 9, 6 )
+tile_data = PoolIntArray( 262157, 9, 6, 262158, 81, 0, 327693, 9, 6, 327694, 9, 6, 327695, 9, 6, 327696, 9, 4, 327697, 9, 6, 327698, 9, 6, 327699, 9, 6, 327700, 9, 6, 327701, 9, 6, 327702, 9, 4, 327703, 9, 6, 327704, 9, 6, 393229, 9, 6, 393230, 9, 6, 393231, 9, 6, 393232, 9, 6, 393233, 9, 6, 393234, 9, 6, 393235, 9, 6, 393236, 9, 6, 393237, 9, 6, 393238, 9, 6, 393239, 9, 6, 393240, 9, 6, 458765, 9, 6, 458766, 9, 6, 458767, 9, 6, 458768, 9, 6, 458769, 9, 6, 458770, 9, 6, 458771, 9, 6, 458772, 9, 6, 458773, 9, 6, 458774, 9, 6, 458775, 9, 6, 458776, 9, 6, 524301, 9, 6, 524302, 9, 6, 524303, 9, 6, 524304, 9, 6, 524305, 9, 6, 524306, 9, 6, 524307, 9, 6, 524308, 9, 6, 524309, 9, 6, 524310, 9, 6, 524311, 9, 6, 524312, 9, 6, 589838, 9, 6, 589839, 9, 6, 589840, 9, 6, 589841, 9, 6, 589842, 9, 6, 589843, 9, 6, 589844, 9, 6, 589845, 9, 6, 589846, 9, 6, 589847, 9, 6, 589848, 9, 6, 655374, 9, 6, 655375, 9, 6, 655376, 9, 6, 655377, 9, 6, 655378, 9, 6, 655379, 9, 6, 655380, 9, 6, 655381, 9, 6, 655382, 9, 6, 655383, 9, 6, 655384, 9, 6, 720909, 9, 6, 720910, 9, 6, 720911, 9, 6, 720912, 9, 6, 720913, 9, 6, 720914, 9, 6, 720915, 9, 6, 720916, 9, 6, 720917, 9, 6, 720918, 9, 6, 720919, 9, 6, 720920, 9, 6, 786445, 9, 6, 786446, 9, 6, 786447, 9, 6, 786448, 9, 6, 786449, 9, 6, 786450, 9, 6, 786451, 9, 6, 786452, 9, 6, 786453, 9, 6, 786454, 9, 6, 786455, 9, 6, 786456, 9, 6, 851981, 9, 6, 851982, 9, 6, 851983, 9, 6, 851984, 9, 6, 851985, 9, 6, 851986, 9, 6, 851987, 9, 6, 851988, 9, 6, 851989, 9, 6, 851990, 9, 6, 851991, 9, 6, 851992, 9, 6, 917517, 9, 6, 917518, 9, 6, 917519, 9, 3, 917520, 9, 6, 917521, 9, 6, 917522, 9, 6, 917523, 9, 6, 917524, 9, 6, 917525, 9, 6, 917526, 9, 6, 917527, 9, 3, 917528, 9, 6, 983058, 9, 6, 983059, 9, 6, 983060, 9, 6, 1048595, 9, 6, 1048596, 9, 6 )
+
+[node name="FurnitureBehindWalls" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 655388, 90, 0, 786476, 59, 0, 786479, 59, 0, 917545, 54, 0, 917547, 64, 0, 917548, 101, 65536, 917552, 76, 0, 1900589, 86, 0 )
 
 [node name="Walls" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 32, 32 )
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 65548, 8, 4, 65549, 8, 131073, 65550, 8, 131073, 65551, 8, 131073, 65552, 8, 131073, 65553, 8, 131073, 65554, 8, 131073, 65555, 8, 131073, 65556, 8, 131073, 65557, 8, 131073, 65558, 8, 131073, 65559, 8, 131073, 65560, 8, 131073, 65561, 8, 131073, 65562, 8, 5, 131084, 8, 65538, 131085, 8, 0, 131086, 8, 1, 131087, 8, 1, 131088, 8, 1, 131089, 8, 1, 131090, 8, 1, 131091, 8, 1, 131092, 8, 1, 131093, 8, 1, 131094, 8, 1, 131095, 8, 1, 131096, 8, 1, 131097, 8, 2, 131098, 8, 65536, 196620, 8, 65538, 196621, 8, 65536, 196633, 8, 65538, 196634, 8, 65536, 262156, 8, 65538, 262157, 8, 65536, 262169, 8, 65538, 262170, 8, 65536, 327692, 8, 65538, 327693, 8, 65536, 327705, 8, 65538, 327706, 8, 65536, 393228, 8, 65538, 393229, 8, 65536, 393241, 8, 65538, 393242, 8, 65536, 458764, 8, 65538, 458765, 8, 65536, 458777, 8, 65538, 458778, 8, 65536, 524300, 8, 65538, 524301, 8, 65536, 524313, 8, 65538, 524314, 8, 65536, 589836, 8, 65538, 589837, 8, 65536, 589849, 8, 65538, 589850, 8, 65536, 655372, 8, 65538, 655373, 8, 65536, 655385, 8, 65538, 655386, 8, 65536, 720908, 8, 65538, 720909, 8, 65536, 720921, 8, 65538, 720922, 8, 65536, 786444, 8, 65538, 786445, 8, 65536, 786457, 8, 65538, 786458, 8, 65536, 851980, 8, 65538, 851981, 8, 65536, 851993, 8, 65538, 851994, 8, 65536, 917516, 8, 65538, 917517, 8, 65536, 917529, 8, 65538, 917530, 8, 65536, 983052, 8, 65538, 983053, 8, 131072, 983054, 8, 131073, 983055, 8, 131073, 983056, 8, 131073, 983057, 8, 131073, 983058, 8, 5, 983061, 8, 4, 983062, 8, 131073, 983063, 8, 131073, 983064, 8, 131073, 983065, 8, 131074, 983066, 8, 65536, 1048588, 8, 65540, 1048589, 8, 1, 1048590, 8, 1, 1048591, 8, 1, 1048592, 8, 1, 1048593, 8, 1, 1048594, 8, 65541, 1048597, 8, 65540, 1048598, 8, 1, 1048599, 8, 1, 1048600, 8, 1, 1048601, 8, 1, 1048602, 8, 65541 )
-
-[node name="backdrop" type="TileMap" parent="Walls"]
-position = Vector2( 0, -64 )
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 32, 32 )
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 327694, 9, 2, 327695, 9, 2, 327696, 9, 1, 327697, 9, 2, 327698, 9, 2, 327699, 9, 2, 327700, 9, 2, 327701, 9, 0, 327702, 9, 1, 327703, 9, 2, 327704, 9, 0, 393230, 9, 65538, 393231, 9, 65538, 393232, 9, 65537, 393233, 9, 65538, 393234, 9, 65538, 393235, 9, 65538, 393236, 9, 65538, 393237, 9, 65538, 393238, 9, 65537, 393239, 9, 65538, 393240, 9, 65538 )
-
-[node name="table bottoms" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
+tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 1703981, 3, 1 )
-
-[node name="Furniture" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 16, 16 )
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 524318, 2, 1, 589852, 0, 0, 655390, 3, 1, 1114154, 7, 0, 1114156, 7, 0, 1114158, 7, 0, 1114160, 7, 0, 1507371, 10, 0, 1572909, 2, 1 )
+tile_data = PoolIntArray( 262169, 5, 0, 262171, 0, 12, 262172, 0, 12, 262174, 0, 12, 262176, 0, 12, 262178, 0, 12, 262180, 0, 12, 262182, 0, 12, 262184, 0, 12, 262186, 0, 12, 262188, 0, 12, 262190, 0, 12, 262192, 0, 12, 262194, 17, 0, 393241, 6, 0, 393266, 16, 0, 524313, 6, 0, 524315, 3, 0, 524317, 3, 0, 524319, 3, 0, 524321, 3, 0, 524323, 3, 0, 524329, 3, 0, 524331, 3, 0, 524332, 3, 0, 524334, 3, 0, 524336, 3, 0, 524338, 16, 0, 655385, 6, 0, 655410, 16, 0, 786457, 6, 0, 786482, 16, 0, 917529, 6, 0, 917554, 16, 0, 1048601, 6, 0, 1048603, 0, 12, 1048605, 0, 12, 1048607, 0, 12, 1048609, 0, 12, 1048611, 0, 12, 1048613, 19, 0, 1048618, 0, 12, 1048620, 0, 12, 1048622, 0, 12, 1048624, 0, 12, 1048626, 16, 0, 1179673, 6, 0, 1179698, 16, 0, 1310745, 6, 0, 1310747, 3, 0, 1310749, 3, 0, 1310751, 3, 0, 1310752, 3, 0, 1310754, 3, 0, 1310755, 3, 0, 1310762, 3, 0, 1310764, 3, 0, 1310766, 3, 0, 1310768, 3, 0, 1310770, 16, 0, 1441817, 6, 0, 1441842, 16, 0, 1572889, 6, 0, 1572914, 16, 0, 1703961, 6, 0, 1703986, 16, 0, 1835033, 6, 0, 1835058, 16, 0, 1966105, 7, 0, 1966107, 11, 0, 1966109, 11, 0, 1966111, 11, 0, 1966113, 11, 0, 1966115, 9, 0, 1966122, 13, 0, 1966124, 14, 0, 1966126, 14, 0, 1966128, 14, 0, 1966130, 15, 0, 2097187, 10, 0, 2097189, 14, 0, 2097191, 14, 0, 2097192, 14, 0, 2097194, 12, 0 )
 
 [node name="Fireplace2" type="StaticBody2D" parent="."]
 
 [node name="Fireplace" type="AnimatedSprite" parent="Fireplace2"]
-position = Vector2( 640, 160 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 8 )
-animation = "New Anim"
-frame = 4
+position = Vector2( 629.309, 130.6 )
+frames = SubResource( 13 )
+animation = "MagicalInteriorFirePlace"
+frame = 3
+speed_scale = 0.8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fireplace2"]
-position = Vector2( 624, 143 )
+position = Vector2( 629.693, 130.343 )
 scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 9 )
+shape = SubResource( 14 )
 
 [node name="Witch" parent="." instance=ExtResource( 2 )]
-position = Vector2( 543.469, 281.062 )
+position = Vector2( 541.35, 257.754 )
+
+[node name="Furniture" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 262190, 100, 0, 327711, 35, 0, 327724, 35, 0, 393253, 84, 0, 458782, 43, 0, 458795, 96, 0, 524335, 94, 0, 589852, 46, 0, 589854, 30, 0, 589858, 46, 0, 851998, 86, 0, 1114140, 25, 0, 1114144, 25, 0, 1114154, 92, 0, 1245220, 34, 0, 1310764, 108, 0, 1310765, 107, 0, 1310766, 84, 0, 1572894, 89, 0, 1638428, 29, 0, 1703966, 20, 0, 1835054, 66, 0 )
+
+[node name="Accents" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( 1704048, 88, 65536, 1704072, 88, 131073, 1835129, 66, 0, 1900675, 74, 0, 2228337, 76, 0, 2359433, 73, 0, 3473538, 75, 0, 4718732, 78, 0, 7864472, 89, 0 )
 
 [node name="DoorToOutside" type="StaticBody2D" parent="."]
 collision_layer = 3
@@ -180,20 +534,20 @@ collision_mask = 0
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToOutside"]
-position = Vector2( 640, 520 )
-shape = SubResource( 10 )
+position = Vector2( 636.822, 507.286 )
+shape = SubResource( 15 )
 
 [node name="Cauldron" type="KinematicBody2D" parent="."]
-position = Vector2( 708.339, 173.814 )
+position = Vector2( 727.388, 375.414 )
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron"]
-position = Vector2( 16.3789, 50.3968 )
-shape = SubResource( 11 )
+position = Vector2( 15.5852, 44.8408 )
+shape = SubResource( 16 )
 
 [node name="Cauldron_Sprite" type="AnimatedSprite" parent="Cauldron"]
 position = Vector2( 16.2265, 32.2677 )
-frames = SubResource( 18 )
+frames = SubResource( 23 )
 animation = "green"
 script = ExtResource( 5 )
 
@@ -202,22 +556,4 @@ collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/BrewingArea"]
 position = Vector2( 15.749, 49.137 )
-shape = SubResource( 19 )
-
-[node name="WallCollision" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollision"]
-position = Vector2( 485.703, 509.044 )
-shape = SubResource( 20 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="WallCollision"]
-position = Vector2( 440.475, 275.538 )
-shape = SubResource( 21 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="WallCollision"]
-position = Vector2( 819.594, 296.561 )
-shape = SubResource( 22 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="WallCollision"]
-position = Vector2( 753.236, 525.112 )
-shape = SubResource( 23 )
+shape = SubResource( 24 )
