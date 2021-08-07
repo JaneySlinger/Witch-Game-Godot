@@ -15,6 +15,7 @@ var quests = [
 			"special": "greenhouse"
 		},
 		"completed": false,
+		"accepted": false
 	},
 	{
 		"name": "Stop the butcher being so grumpy",
@@ -29,6 +30,7 @@ var quests = [
 			"special": ""
 		},
 		"completed": false,
+		"accepted": false
 	},
 	{
 		"name": "Save a cat from a tree 2",
@@ -43,6 +45,7 @@ var quests = [
 			"special": "greenhouse"
 		},
 		"completed": false,
+		"accepted": false
 	},
 	{
 		"name": "Stop the butcher being so grumpy 2",
@@ -57,6 +60,7 @@ var quests = [
 			"special": ""
 		},
 		"completed": false,
+		"accepted": false
 	},
 	{
 		"name": "Help the young couple admit their feelings",
@@ -71,6 +75,7 @@ var quests = [
 			"special": "greenhouse"
 		},
 		"completed": false,
+		"accepted": false
 	},
 	{
 		"name": "Stop the butcher being so grumpy 3",
@@ -85,6 +90,7 @@ var quests = [
 			"special": "House Upgrade"
 		},
 		"completed": false,
+		"accepted": false
 	}
 ]
 
@@ -95,3 +101,6 @@ func get_quest_by_name(quest_name):
 	for quest in quests:
 		if quest["name"] == quest_name:
 			return quest
+
+func set_accepted(quest_name):
+	get_quest_by_name(quest_name)["accepted"] = true

@@ -37,3 +37,5 @@ func get_quest_info():
 func _on_Accept_pressed():
 	print (quest_name)
 	PersistedInventory.add_quest(quest_name)
+	GlobalQuests.set_accepted(quest_name)
+	queue_free()	#delete the node so the quest disappears from the board

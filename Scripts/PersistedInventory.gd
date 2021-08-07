@@ -6,7 +6,7 @@ var playerQuests = []
 signal item_added(inv, label, item_name, price)
 signal item_removed(inv, label)
 signal quest_added(quest_name)
-signal quest_removed(quest_name)
+#signal quest_removed(quest_name)
 var playerMoney = 0
 var shopMoney = 100
 var hour = 6
