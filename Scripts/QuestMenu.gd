@@ -1,4 +1,6 @@
 extends ItemList
+
+onready var InfoPanel = get_node("../../QuestInfoPanel")
 	
 func add_to_quests(quest_name):
 	var path = "res://Resources/Textures/Items/scroll_open.png";
@@ -18,3 +20,8 @@ func remove_from_quests(quest_name):
 		if(get_item_text(index) == quest_name):
 			remove_item(index)
 			break
+
+
+func _on_QuestList_item_selected(index):
+	InfoPanel.setup(get_item_text(index))
+	
