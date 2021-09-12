@@ -1,3 +1,4 @@
+tool
 extends TileMap
 export var HOUSE_STATUS = "00"
 export var HOUSE_PLACEMENT = {"x":19, "y":2}

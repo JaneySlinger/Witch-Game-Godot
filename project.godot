@@ -36,11 +36,18 @@ PersistedInventory="*res://Scripts/PersistedInventory.gd"
 GlobalPotions="*res://Scripts/GlobalPotions.gd"
 GlobalIngredients="*res://Scripts/GlobalIngredients.gd"
 GlobalQuests="*res://Scripts/GlobalQuests.gd"
+BasicImport="*res://Scripts/Dialogue/BasicImport.gd"
 
 [display]
 
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
 
 [input]
 

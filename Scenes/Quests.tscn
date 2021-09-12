@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Styles/BackgroundColour.tres" type="StyleBox" id=1]
-[ext_resource path="res://Resources/Textures/Items/scroll_open.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Styles/LighterBackground.tres" type="StyleBox" id=3]
-[ext_resource path="res://Resources/Textures/Items/scroll_closed.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/QuestMenu.gd" type="Script" id=5]
 [ext_resource path="res://Resources/Fonts/Cursive.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Scripts/QuestDetailedInfo.gd" type="Script" id=10]
@@ -34,7 +32,6 @@ margin_bottom = 528.0
 custom_styles/bg = ExtResource( 3 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-items = [ "Quest 1", ExtResource( 4 ), false, "Quest 2", ExtResource( 2 ), false ]
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true,
@@ -100,11 +97,24 @@ __meta__ = {
 }
 
 [node name="Claim" type="Button" parent="QuestInfoPanel"]
+visible = false
 margin_left = 406.552
 margin_top = 444.952
 margin_right = 499.552
 margin_bottom = 480.952
 text = "Claim"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClaimInstructions" type="Label" parent="QuestInfoPanel"]
+visible = false
+margin_left = 20.2505
+margin_top = 463.731
+margin_right = 114.25
+margin_bottom = 477.731
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Claim by talking to "
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -133,3 +143,4 @@ __meta__ = {
 }
 
 [connection signal="item_selected" from="QuestListPanel/QuestList" to="QuestListPanel/QuestList" method="_on_QuestList_item_selected"]
+[connection signal="pressed" from="QuestInfoPanel/Claim" to="QuestInfoPanel" method="_on_Claim_pressed"]

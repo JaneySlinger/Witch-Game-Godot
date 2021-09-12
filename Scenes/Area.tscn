@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=113 format=2]
 
 [ext_resource path="res://Resources/customeTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Scripts/Cat.gd" type="Script" id=2]
@@ -18,6 +18,22 @@
 [ext_resource path="res://Scripts/NPC.gd" type="Script" id=16]
 [ext_resource path="res://Resources/Textures/Rpg/rpg game assets/tilemap/town/questBoard.png" type="Texture" id=17]
 [ext_resource path="res://Scripts/QuestBoard.gd" type="Script" id=18]
+[ext_resource path="res://Scenes/NPC.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/4_Hair/curly/curly_grey.png" type="Texture" id=20]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/2_Eyes/blush/blush4.png" type="Texture" id=21]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/3_Legs/pants/pants_blue_light.png" type="Texture" id=22]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/2_Shirt/floral/floral_green_light.png" type="Texture" id=23]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/1_Characters/character_animation_3.png" type="Texture" id=25]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/3_Legs/pants/pants_black.png" type="Texture" id=26]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/2_Eyes/lipstick/lipstick3.png" type="Texture" id=27]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/5_Accessories/glasses/glasses_black.png" type="Texture" id=28]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/1_Shoes/shoes_black.png" type="Texture" id=29]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/2_Shirt/sporty/sporty_green.png" type="Texture" id=30]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/2_Eyes/blush/blush3.png" type="Texture" id=31]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/2_Eyes/lipstick/lipstick4.png" type="Texture" id=32]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/2_Shirt/overalls/overalls_blue_light.png" type="Texture" id=33]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/4_Hair/gentleman/gentleman_black.png" type="Texture" id=34]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/1_Characters/character_animation_4.png" type="Texture" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 47.4746, 29.7558 )
@@ -73,62 +89,62 @@ animations = [ {
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 256, 256, 256 )
+region = Rect2( 0, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 256, 256, 256 )
+region = Rect2( 256, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 256, 256, 256 )
+region = Rect2( 512, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 256, 256, 256 )
+region = Rect2( 768, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 256, 256, 256 )
+region = Rect2( 0, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 256, 256, 256 )
+region = Rect2( 256, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 256, 256, 256 )
+region = Rect2( 512, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 256, 256, 256 )
+region = Rect2( 768, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 256, 256 )
+region = Rect2( 0, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 0, 256, 256 )
+region = Rect2( 256, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 0, 256, 256 )
+region = Rect2( 512, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 0, 256, 256 )
+region = Rect2( 768, 768, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
@@ -153,98 +169,98 @@ region = Rect2( 768, 0, 256, 256 )
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 768, 256, 256 )
+region = Rect2( 0, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 768, 256, 256 )
+region = Rect2( 256, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 768, 256, 256 )
+region = Rect2( 512, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 768, 256, 256 )
+region = Rect2( 768, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 512, 256, 256 )
+region = Rect2( 0, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 512, 256, 256 )
+region = Rect2( 256, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 512, 256, 256 )
+region = Rect2( 512, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 512, 256, 256 )
+region = Rect2( 768, 256, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 512, 256, 256 )
+region = Rect2( 0, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 512, 256, 256 )
+region = Rect2( 256, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 512, 256, 256 )
+region = Rect2( 512, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 512, 256, 256 )
+region = Rect2( 768, 0, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 0, 768, 256, 256 )
+region = Rect2( 0, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 256, 768, 256, 256 )
+region = Rect2( 256, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=41]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 512, 768, 256, 256 )
+region = Rect2( 512, 512, 256, 256 )
 
 [sub_resource type="AtlasTexture" id=42]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 768, 768, 256, 256 )
+region = Rect2( 768, 512, 256, 256 )
 
 [sub_resource type="SpriteFrames" id=43]
 animations = [ {
 "frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
-"name": "walk_right",
+"name": "idle_up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
 "loop": true,
-"name": "idle_right",
+"name": "walk_left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": true,
-"name": "idle_down",
+"name": "walk_up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
@@ -254,22 +270,22 @@ animations = [ {
 }, {
 "frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
 "loop": true,
-"name": "idle_up",
+"name": "walk_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ) ],
 "loop": true,
-"name": "walk_left",
+"name": "idle_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
 "loop": true,
-"name": "idle_left",
+"name": "idle_down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "idle_left",
 "speed": 5.0
 } ]
 
@@ -504,8 +520,18 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 131091, 25, 0, 327698, 3, 1, 458774, 3, 0, 524298, 3, 4, 524300, 6, 0, 524311, 3, 3, 655358, 6, 0, 720919, 3, 3, 720920, 3, 3, 720921, 3, 3, 720922, 3, 3, 720923, 3, 3, 720924, 3, 3, 720925, 3, 3, 720926, 3, 3, 720927, 3, 3, 786437, 3, 2, 786453, 11, 0, 917506, 3, 4, 983064, 10, 0, 1048581, 6, 0, 1048582, 6, 0, 1048583, 6, 0, 1048584, 6, 0, 1048585, 6, 0, 1048586, 6, 0, 1048587, 6, 0, 1048588, 6, 0, 1048589, 6, 0, 1114141, 10, 0 )
+tile_data = PoolIntArray( 131091, 27, 0, 131097, 28, 0, 327698, 3, 1, 458774, 3, 0, 524298, 3, 4, 524300, 6, 0, 524311, 3, 3, 655358, 6, 0, 720919, 3, 3, 720920, 3, 3, 720921, 3, 3, 720922, 3, 3, 720923, 3, 3, 720924, 3, 3, 720925, 3, 3, 720926, 3, 3, 720927, 3, 3, 786437, 3, 2, 786453, 11, 0, 917506, 3, 4, 983064, 10, 0, 1048581, 6, 0, 1048582, 6, 0, 1048583, 6, 0, 1048584, 6, 0, 1048585, 6, 0, 1048586, 6, 0, 1048587, 6, 0, 1048588, 6, 0, 1048589, 6, 0, 1114141, 10, 0 )
 script = ExtResource( 15 )
+HOUSE_STATUS = "02"
+HOUSE_PLACEMENT = {
+"x": 19,
+"y": 2
+}
+GREENHOUSE_STATUS = true
+GREENHOUSE_PLACEMENT = {
+"x": 25,
+"y": 2
+}
 
 [node name="TownBuildings" type="TileMap" parent="."]
 tile_set = ExtResource( 8 )
@@ -535,11 +561,94 @@ shape = SubResource( 1 )
 position = Vector2( 2238.7, 681.651 )
 frames = SubResource( 10 )
 animation = "New Anim"
-frame = 3
+frame = 1
 playing = true
 
+[node name="Boy" parent="." instance=ExtResource( 19 )]
+position = Vector2( 2913.36, 326.48 )
+scale = Vector2( 2, 2 )
+
+[node name="Body" parent="Boy/Sprites" index="0"]
+texture = ExtResource( 25 )
+skin_tone = "3"
+
+[node name="Hair" parent="Boy/Sprites" index="1"]
+texture = ExtResource( 34 )
+hair_style = "gentleman"
+hair_colour = "black"
+
+[node name="Shirt" parent="Boy/Sprites" index="2"]
+texture = ExtResource( 30 )
+shirt_style = "sporty"
+colour = "green"
+
+[node name="Trousers" parent="Boy/Sprites" index="3"]
+texture = ExtResource( 26 )
+style = "pants"
+
+[node name="Shoes" parent="Boy/Sprites" index="4"]
+texture = ExtResource( 29 )
+colour = "black"
+
+[node name="Lips" parent="Boy/Sprites" index="6"]
+texture = ExtResource( 27 )
+lip_tone = "3"
+
+[node name="Glasses" parent="Boy/Sprites" index="8"]
+texture = ExtResource( 28 )
+colour = "black"
+
+[node name="Blush" parent="Boy/Sprites" index="10"]
+texture = ExtResource( 31 )
+blush_tone = "3"
+
+[node name="OldLady" parent="." instance=ExtResource( 19 )]
+position = Vector2( 580.432, 225.124 )
+scale = Vector2( 2, 2 )
+dialogue_file = "res://Scripts/Dialogue/oldLady.json"
+
+[node name="Body" parent="OldLady/Sprites" index="0"]
+texture = ExtResource( 35 )
+skin_tone = "4"
+
+[node name="Hair" parent="OldLady/Sprites" index="1"]
+texture = ExtResource( 20 )
+hair_style = "curly"
+hair_colour = "grey"
+
+[node name="Shirt" parent="OldLady/Sprites" index="2"]
+texture = ExtResource( 23 )
+shirt_style = "floral"
+colour = "green_light"
+
+[node name="Shoes" parent="OldLady/Sprites" index="4"]
+texture = ExtResource( 29 )
+colour = "black"
+
+[node name="Lips" parent="OldLady/Sprites" index="6"]
+texture = ExtResource( 32 )
+lip_tone = "4"
+
+[node name="Blush" parent="OldLady/Sprites" index="10"]
+texture = ExtResource( 21 )
+blush_tone = "4"
+
+[node name="Cowgirl" parent="." instance=ExtResource( 19 )]
+position = Vector2( 2866.97, 277.897 )
+scale = Vector2( 2, 2 )
+
+[node name="Shirt" parent="Cowgirl/Sprites" index="2"]
+texture = ExtResource( 33 )
+shirt_style = "overalls"
+colour = "blue_light"
+
+[node name="Trousers" parent="Cowgirl/Sprites" index="3"]
+texture = ExtResource( 22 )
+style = "pants"
+colour = "blue_light"
+
 [node name="Witch" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2689.7, 119.026 )
+position = Vector2( 464.713, 80.07 )
 
 [node name="Cat" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
@@ -588,7 +697,6 @@ type = 6
 
 [node name="Mushroom2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 442.091, 279.383 )
-type = 1
 
 [node name="Mushroom3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 110.126, 158.071 )
@@ -613,7 +721,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Merchant" type="AnimatedSprite" parent="Merchant"]
 position = Vector2( 2367.67, 540.447 )
 frames = SubResource( 54 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Merchant"]
@@ -627,6 +735,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Farmer" type="AnimatedSprite" parent="Farmer"]
 position = Vector2( 2560.54, 536.478 )
 frames = SubResource( 66 )
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Farmer"]
@@ -640,9 +749,12 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="MagicMerchant" type="AnimatedSprite" parent="Magic Merchant"]
 position = Vector2( 2717.82, 492.093 )
 frames = SubResource( 77 )
-frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Magic Merchant"]
 position = Vector2( 2717.92, 489.682 )
 shape = SubResource( 78 )
+
+[editable path="Boy"]
+[editable path="OldLady"]
+[editable path="Cowgirl"]

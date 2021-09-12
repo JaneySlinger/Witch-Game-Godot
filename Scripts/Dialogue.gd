@@ -4,14 +4,17 @@ var lastBttnPos = 0
 var buttonFired = false
 var timer = 0
 
-var parser = WhiskersParser.new()
+#The base instance is the file with functions and variables for the dialogue
+var default_base_instance = BasicImport
+
+var parser = WhiskersParser.new(default_base_instance)
 var block
 onready var NPCText = get_node("TextPanel/NPCText")
 onready var NPCName = get_node("NamePanel/NPCName")
 onready var Shop = get_node("../Shop")
 
 func open_dialogue(dialogue_file):
-	parser = WhiskersParser.new()
+	parser = WhiskersParser.new(default_base_instance)
 	var dialogue_data = parser.open_whiskers(dialogue_file)
 	block = parser.start_dialogue(dialogue_data)
 	set_npc_name(dialogue_data.info.display_name)
