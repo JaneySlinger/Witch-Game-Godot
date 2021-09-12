@@ -17,4 +17,5 @@ region_rect = Rect2( 224, 352, 32, 32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
 [connection signal="body_entered" from="." to="." method="_on_Mushroom_body_entered"]

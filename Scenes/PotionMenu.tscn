@@ -164,5 +164,6 @@ icon = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="item_selected" from="Panel/PotionList" to="." method="_on_PotionList_item_selected"]
 [connection signal="pressed" from="Panel2/BrewButton" to="." method="_on_BrewButton_pressed"]

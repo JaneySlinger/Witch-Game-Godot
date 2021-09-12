@@ -3,5 +3,5 @@
 [ext_resource path="res://Resources/Fonts/DancingScript-Regular.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 50
+size = 40
 font_data = ExtResource( 1 )

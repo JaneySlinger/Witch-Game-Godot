@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/starWallAndBlueBedPreview.png-86caad8d79cb6173a57d28bbd55ce764.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Resources/Textures/Magical Interiors/CBL(indoors- base assets, magical stuff, tavern, inn_updated_5)/Screenshots/starWallAndBlueBedPreview.png"
+dest_files=[ "res://.import/starWallAndBlueBedPreview.png-86caad8d79cb6173a57d28bbd55ce764.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
