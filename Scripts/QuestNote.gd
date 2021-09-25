@@ -25,9 +25,9 @@ func set_rewards():
 func set_requirements():
 	var grid = get_node("Panel/RequirementsGrid")
 	for requirement in current_quest["requirements"]:
-		var potion_icon = GlobalPotions.get_potion_icon(requirement)
+		var potion_texture_path = GlobalPotions.get_potion_texture(requirement)
 		var textureRect = TextureRect.new()
-		textureRect.texture = load("res://Resources/Textures/Items/" + potion_icon + ".png")
+		textureRect.texture = load(potion_texture_path)
 		grid.add_child(textureRect)
 	
 func get_quest_info():

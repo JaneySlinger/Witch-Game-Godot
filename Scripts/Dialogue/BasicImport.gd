@@ -17,9 +17,9 @@ var varTooltips = [
 ]
 
 #====> FUNCTIONS
-func give_item(item_name):
-	print("giving item " + item_name)
-	PersistedInventory.add_item("playerInv", "Strawberry", "strawberry", 1, "res://Resources/Textures/Items/strawberry.png")
+func give_item(display_name):
+	print("giving item " + display_name)
+	PersistedInventory.add_item("playerInv", display_name)
 	pass
 
 func accept_quest(quest_name):
@@ -35,7 +35,7 @@ func complete_quest(quest_name):
 
 # `export` our functions and documentation about them! 
 var functions = [
-	'give_item("item_name")',
+	'give_item("display_name")',
 	'accept_quest("quest_name")',
 	'are_quest_requirements_met("quest_name")'
 ]

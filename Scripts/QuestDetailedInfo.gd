@@ -17,8 +17,9 @@ onready var specialTexture = load("res://Resources/Textures/Items/treasure.png")
 func _ready():
 	PersistedInventory.connect("quest_completed", self, "mark_as_complete")
 
-func mark_as_complete(quest_name):
+func mark_as_complete(incoming_quest_name):
 	print("updating the field")
+	quest_name = incoming_quest_name
 	set_claim_info()
 
 func setup(name):
@@ -38,8 +39,8 @@ func set_requirements():
 	var requirementsList = get_node("RequirementsList")
 	requirementsList.clear()
 	for requirement in current_quest["requirements"]:
-		var potion_icon = GlobalPotions.get_potion_icon(requirement)
-		var potion_texture = load("res://Resources/Textures/Items/" + potion_icon + ".png")
+		var potion_texture_path = GlobalPotions.get_potion_texture(requirement)
+		var potion_texture = load(potion_texture_path)
 		requirementsList.add_item(requirement, potion_texture, false)
 	
 func set_rewards_list():

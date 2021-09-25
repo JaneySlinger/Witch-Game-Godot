@@ -20,7 +20,7 @@ var sprite_rects = [Rect2(224, 352, 32, 32),
 					Rect2(224, 448, 32, 32)]
 
 func _process(delta):
-	#also changes it in editor apparently
+	#also changes it in editor as using tool keyword at top of file
 	set_sprite_rect()
 			
 func _ready():
@@ -31,6 +31,5 @@ func set_sprite_rect():
 	
 func _on_Mushroom_body_entered(body):
 	if body.name == "Witch":
-		PersistedInventory.add_item("playerInv", properties[type]["label"], properties[type]["item_name"], properties[type]["price"], properties[type]["texture_path"])
-		#PersistedInventory.remove_item(properties[type]["label"], properties[type]["item_name"])
+		PersistedInventory.add_item("playerInv", properties[type]["display_name"])
 		get_tree().queue_delete(self)

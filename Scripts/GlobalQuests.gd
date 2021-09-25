@@ -139,7 +139,7 @@ func complete_quest(quest_name):
 
 func submit_items(quest):
 	for requirement in quest["requirements"]:
-		PersistedInventory.remove_quest_item("playerInv", requirement)
+		PersistedInventory.remove_item("playerInv", requirement)
 
 func process_rewards(quest):
 	print("reward money is: " + String(quest["rewards"]["money"]))
