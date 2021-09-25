@@ -15,7 +15,7 @@ var currentG = 1.0
 var currentB = 1.0
 
 
-var colours = [	Color( 0.25, 0.25, 0.5, 1 ),
+var colours = [	Color( 0.35, 0.35, 0.6, 1 ),
 				Color( 0.32,0.32,0.55, 1 ),
 				Color( 0.39,0.39,0.59, 1 ),
 				Color( 0.45,0.45,0.64, 1 ),

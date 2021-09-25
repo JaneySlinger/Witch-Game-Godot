@@ -16,6 +16,7 @@ func _ready():
 		add_to_inventory("playerInv", item["label"], item["item_name"])
 
 func remove_from_inventory(inv, label):
+	print("removing " + label + " from inventory menu")
 	if(inv == "playerInv"):
 		print("remove method")
 		for index in range(get_item_count()):

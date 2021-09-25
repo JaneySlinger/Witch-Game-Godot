@@ -11,6 +11,8 @@ onready var shopMoneyLabel = get_node("Panel/ShopMoney")
 
 var item_to_sell
 var item_to_buy
+var price
+var item_texture
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -61,15 +63,19 @@ func remove_from_inventory(inv, label):
 			inventory.remove_item(index)
 			break
 			
-func canAfford(wallet, item_label):
-	var price = GlobalIngredients.get_ingredient_price(GlobalIngredients.get_ingredient_name(item_label)) 
+func canAfford(wallet, price):
 	print(wallet-price)
 	return (wallet - price >= 0)
 
 func _on_BuyButton_pressed():
-	var item_name = GlobalIngredients.get_ingredient_name(item_to_buy)
-	var price = GlobalIngredients.get_ingredient_price(item_name)
-	PersistedInventory.add_item("playerInv",item_to_buy, item_name, GlobalIngredients.get_ingredient_price(item_name))
+	if GlobalIngredients.get_ingredient_name(item_to_buy) == null:
+		var item_name = item_to_buy
+		PersistedInventory.add_item("playerInv",item_to_buy, item_texture, price)
+	else:
+		var item_name = GlobalIngredients.get_ingredient_name(item_to_buy)
+		PersistedInventory.add_item("playerInv",item_to_buy, item_name, price)
+	#var price = GlobalIngredients.get_ingredient_price(item_name)
+	#PersistedInventory.add_item("playerInv",item_to_buy, item_name, price)
 	
 	PersistedInventory.playerMoney -= price
 	playerMoneyLabel.text = String(PersistedInventory.playerMoney)
@@ -78,10 +84,20 @@ func _on_BuyButton_pressed():
 	buyButton.disabled = true
 
 func _on_SellButton_pressed():
-	var item_name = GlobalIngredients.get_ingredient_name(item_to_sell)
-	var price = GlobalIngredients.get_ingredient_price(item_name)
-	PersistedInventory.add_item("shop01",item_to_sell, item_name, price)
-	PersistedInventory.remove_item("playerInv", item_to_sell, item_name)
+	if GlobalIngredients.get_ingredient_name(item_to_sell) == null:
+		var item_name = item_to_sell
+		PersistedInventory.add_item("playerInv",item_to_sell, item_name, price)
+		PersistedInventory.add_item("shop01",item_to_sell, item_texture, price)
+		PersistedInventory.remove_item("playerInv", item_to_sell, item_name)
+	else:
+		var item_name = GlobalIngredients.get_ingredient_name(item_to_sell)
+		PersistedInventory.add_item("playerInv",item_to_sell, item_name, price)
+		PersistedInventory.add_item("shop01",item_to_sell, item_name, price)
+		PersistedInventory.remove_item("playerInv", item_to_sell, item_name)
+		
+	#var item_name = GlobalIngredients.get_ingredient_name(item_to_sell)
+	#var price = GlobalIngredients.get_ingredient_price(item_name)
+	
 
 	PersistedInventory.playerMoney += price
 	playerMoneyLabel.text = String(PersistedInventory.playerMoney)
@@ -93,14 +109,29 @@ func _on_InventoryPlayer_item_selected(index):
 	sellButton.disabled = true	#stops you selling an item from an empty inventory
 	if InventoryPlayer.get_item_count() != 0:
 		item_to_sell = InventoryPlayer.get_item_text(index)
-		priceLabel.text = String(GlobalIngredients.get_ingredient_price(GlobalIngredients.get_ingredient_name(item_to_sell)))
-		if(canAfford(PersistedInventory.shopMoney, item_to_sell)):
+		item_texture = InventoryPlayer.get_item_icon(index).resource_path
+		price = get_price(item_to_sell)
+		priceLabel.text = String(price)
+		#priceLabel.text = String(GlobalIngredients.get_ingredient_price(GlobalIngredients.get_ingredient_name(item_to_sell)))
+		if(canAfford(PersistedInventory.shopMoney, price)):
 			sellButton.disabled = false			
 
 func _on_InventoryShop_item_selected(index):
 	buyButton.disabled = true
-	if InventoryShop.get_item_count() != 0:
-		item_to_buy = InventoryShop.get_item_text(index)
-		priceLabel.text = String(GlobalIngredients.get_ingredient_price(GlobalIngredients.get_ingredient_name(item_to_buy)))
-		if(canAfford(PersistedInventory.playerMoney, item_to_buy)):
-			buyButton.disabled = false			
+	if(index > 0):
+		if InventoryShop.get_item_count() != 0:
+			item_to_buy = InventoryShop.get_item_text(index)
+			item_texture = InventoryPlayer.get_item_icon(index).resource_path
+			price = get_price(item_to_buy)
+			priceLabel.text = String(price)
+			if(canAfford(PersistedInventory.playerMoney, price)):
+				buyButton.disabled = false
+
+func get_price(item_to_check):
+	#need to check if potion or ingredient
+	if "potion" in item_texture:
+		print("This is a potion")
+		return GlobalPotions.get_potion_price(item_to_check)
+	else:
+		print("This is not a potion")
+		return GlobalIngredients.get_ingredient_price(GlobalIngredients.get_ingredient_name(item_to_check))
