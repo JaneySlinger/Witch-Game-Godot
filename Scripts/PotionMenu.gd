@@ -13,6 +13,7 @@ var currentPotionName
 var currentPotionIconRef
 var currentPotionIngredients
 var currentPotionPrice = 5
+var currentPotionTexturePath
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -29,6 +30,7 @@ func _on_PotionList_item_selected(index):
 	#save the name and icon value so it can be added to inventory later
 	currentPotionName = potions[index]["name"]
 	currentPotionIconRef = potions[index]["icon"]
+	currentPotionTexturePath = potions[index]["texture_path"]
 	potionNameLabel.text = currentPotionName
 	potionInfoLabel.text = potions[index]["description"]
 	var texture = load("res://Resources/Textures/Items/" + currentPotionIconRef + ".png")
@@ -66,7 +68,7 @@ func _on_BrewButton_pressed():
 		for ingredient_name in currentPotionIngredients:
 			#get the item index in the globalIngredients file to get the label
 			PersistedInventory.remove_item("playerInv", GlobalIngredients.get_ingredient_label(ingredient_name), ingredient_name)
-		PersistedInventory.add_item("playerInv", currentPotionName, currentPotionIconRef, currentPotionPrice)
+		PersistedInventory.add_item("playerInv", currentPotionName, currentPotionIconRef, currentPotionPrice, currentPotionTexturePath)
 	
 	
 	

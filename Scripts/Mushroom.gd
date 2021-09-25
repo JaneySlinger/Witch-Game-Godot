@@ -31,6 +31,6 @@ func set_sprite_rect():
 	
 func _on_Mushroom_body_entered(body):
 	if body.name == "Witch":
-		PersistedInventory.add_item("playerInv", properties[type]["label"], properties[type]["item_name"], properties[type]["price"])
+		PersistedInventory.add_item("playerInv", properties[type]["label"], properties[type]["item_name"], properties[type]["price"], properties[type]["texture_path"])
 		#PersistedInventory.remove_item(properties[type]["label"], properties[type]["item_name"])
 		get_tree().queue_delete(self)

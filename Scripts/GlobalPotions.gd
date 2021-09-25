@@ -7,6 +7,7 @@ var potions = [
 		"description": "A potion that will have you feeling light on your feet. Maybe a little too light...",
 		"icon": "potion_blue",
 		"item_id": "potion_blue",
+		"texture_path": "res://Resources/Textures/Items/potion_blue.png",
 		"quests": [
 			"Save a cat from a tree",
 			"Help the old lady walk"
@@ -24,6 +25,7 @@ var potions = [
 		"description": "For when you have those down days.",
 		"icon": "potion_purple",
 		"item_id": "potion_purple",
+		"texture_path": "res://Resources/Textures/Items/potion_purple.png",
 		"quests": [
 			"Cheer the young woman up",
 		],
@@ -39,6 +41,7 @@ var potions = [
 		"description": "Brighten up the darkest corners.",
 		"icon": "potion_green",
 		"item_id": "potion_green",
+		"texture_path": "res://Resources/Textures/Items/potion_green.png",
 		"quests": [
 			"Light up the village at night",
 			"Help the baker walk home safely"
@@ -57,6 +60,7 @@ var potions = [
 		"description": "Ease your aches and pains.",
 		"icon": "potion_red",
 		"item_id": "potion_red",
+		"texture_path": "res://Resources/Textures/Items/potion_red.png",
 		"quests": [
 			"Stop the butcher being so grumpy",
 			"Cure the little girl's headache",
@@ -76,6 +80,7 @@ var potions = [
 		"description": "Sometimes you need a little help to tell the truth.",
 		"icon": "potion_purple",
 		"item_id": "potion_purple",
+		"texture_path": "res://Resources/Textures/Items/potion_purple.png",
 		"quests": [
 			"Help the young couple admit their feelings"
 		],
@@ -90,6 +95,7 @@ var potions = [
 		"description": "Warning: This will cause itching. Use with care.",
 		"icon": "potion_green",
 		"item_id": "potion_green",
+		"texture_path": "res://Resources/Textures/Items/potion_green.png",
 		"quests": [
 			"Annoy the candle stick maker"
 		],
@@ -107,6 +113,7 @@ var potions = [
 		"description": "Cures itching. Not to be confused with the Itching Potion.",
 		"icon": "potion_green",
 		"item_id": "potion_green",
+		"texture_path": "res://Resources/Textures/Items/potion_green.png",
 		"quests": [
 			"Cure the old lady's itching"
 		],

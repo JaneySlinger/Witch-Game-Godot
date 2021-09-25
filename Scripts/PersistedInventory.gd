@@ -26,12 +26,13 @@ func map_to_inventory(inv):
 	if inv == "playerInv": return playerInv
 	if inv == "shop01": return shop01
 
-func add_item(inv, label, item_name, price):
+func add_item(inv, label, item_name, price, texture_path):
 	var mapped_inv = map_to_inventory(inv)
 	mapped_inv.append({
 		"label": label,
 		"item_name": item_name,
-		"price": price
+		"price": price,
+		"texture_path": texture_path
 		})
 	emit_signal("item_added", inv, label, item_name)
 	print(mapped_inv)

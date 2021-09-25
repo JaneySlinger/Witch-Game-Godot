@@ -48,9 +48,9 @@ func _ready():
 func change_lighting():
 	#could change more regularly at smaller intervals to make it smoother
 	var hour = PersistedInventory.hour
-	print(hour)
+	#print(hour)
 	if(hour >= 0 and hour < 12):
-		print("getting lighter")
+		#print("getting lighter")
 		#sky should be getting lighter between midnight and noon
 		var currentR = stepify((minR + ((diffR / 12) * hour)), 0.01)
 		var currentG = stepify((minG + ((diffG / 12) * hour)), 0.01)
@@ -59,7 +59,7 @@ func change_lighting():
 		set_color(new_colour)
 	else:
 		if (hour > 12 and hour <= 23):
-			print("getting darker")
+			#print("getting darker")
 			#sky should be getting darker between noon and midnight
 			var currentR = stepify((maxR - ((diffR / 12) * (hour-12))), 0.01)
 			var currentG = stepify((maxG - ((diffG / 12) * (hour-12))),0.01)

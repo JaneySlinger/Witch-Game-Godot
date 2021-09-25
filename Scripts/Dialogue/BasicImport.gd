@@ -19,7 +19,7 @@ var varTooltips = [
 #====> FUNCTIONS
 func give_item(item_name):
 	print("giving item " + item_name)
-	PersistedInventory.add_item("playerInv", "Strawberry", "strawberry", 1)
+	PersistedInventory.add_item("playerInv", "Strawberry", "strawberry", 1, "res://Resources/Textures/Items/strawberry.png")
 	pass
 
 func accept_quest(quest_name):
