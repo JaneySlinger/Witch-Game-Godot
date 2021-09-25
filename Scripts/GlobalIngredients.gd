@@ -2,165 +2,155 @@ extends Node
 
 var ingredients = [
 	{
-		"label": "Blue Mushroom", 
-		"item_name": "mushroom_blue_1",
+		"display_name": "Blue Mushroom", 
+		"texture_path": "res://Resources/Textures/Items/mushroom_blue_1.png",
 		"price": 3},
 	{
-		"label": "Blue Sparkle Mushroom", 
-		"item_name": "mushroom_blue_2",
+		"display_name": "Blue Sparkle Mushroom", 
+		"texture_path": "res://Resources/Textures/Items/mushroom_blue_2.png",
 		"price": 3},
 	{
-		"label": "Purple Mushroom",
-		"item_name": "mushroom_purple_1",
+		"display_name": "Purple Mushroom",
+		"texture_path": "res://Resources/Textures/Items/mushroom_purple_1.png",
 		"price": 3},
 	{
-		"label": "Purple Sparkle Mushroom",
-		"item_name": "mushroom_purple_2",
+		"display_name": "Purple Sparkle Mushroom",
+		"texture_path": "res://Resources/Textures/Items/mushroom_purple_2.png",
 		"price": 3},
 	{
-		"label": "Red Mushroom",
-		"item_name": "mushroom_red_1",
+		"display_name": "Red Mushroom",
+		"texture_path": "res://Resources/Textures/Items/mushroom_red_1.png",
 		"price": 3},
 	{
-		"label": "Red Sparkle Mushroom",
-		"item_name": "mushroom_red_2",
+		"display_name": "Red Sparkle Mushroom",
+		"texture_path": "res://Resources/Textures/Items/mushroom_red_2.png",
 		"price": 3},
 	{
-		"label": "Orange Mushroom",
-		"item_name": "mushroom_orange_1",
+		"display_name": "Orange Mushroom",
+		"texture_path": "res://Resources/Textures/Items/mushroom_orange_1.png",
 		"price": 3},
 	{
-		"label": "Orange Sparkle Mushroom",
-		"item_name": "mushroom_orange_2",
+		"display_name": "Orange Sparkle Mushroom",
+		"texture_path": "res://Resources/Textures/Items/mushroom_orange_2.png",
 		"price": 3},
 	{
-		"label": "Apple",
-		"item_name": "apple",
+		"display_name": "Apple",
+		"texture_path": "res://Resources/Textures/Items/apple.png",
 		"price": 1},
 	{
-		"label": "Carrot",
-		"item_name": "carrot",
+		"display_name": "Carrot",
+		"texture_path": "res://Resources/Textures/Items/carrot.png",
 		"price": 1},
 	{
-		"label": "Banana",
-		"item_name": "banana",
+		"display_name": "Banana",
+		"texture_path": "res://Resources/Textures/Items/banana.png",
 		"price": 1},
 	{
-		"label": "Berries",
-		"item_name": "berries",
+		"display_name": "Berries",
+		"texture_path": "res://Resources/Textures/Items/berries.png",
 		"price": 1},
 	{
-		"label": "Bulb",
-		"item_name": "bulb",
+		"display_name": "Bulb",
+		"texture_path": "res://Resources/Textures/Items/bulb.png",
 		"price": 1},
 	{
-		"label": "Chilli",
-		"item_name": "chilli",
+		"display_name": "Chilli",
+		"texture_path": "res://Resources/Textures/Items/chilli.png",
 		"price": 1},
 	{
-		"label": "Chocolate",
-		"item_name": "chocolate",
+		"display_name": "Chocolate",
+		"texture_path": "res://Resources/Textures/Items/chocolate.png",
 		"price": 1},
 	{
-		"label": "Corn",
-		"item_name": "corn",
+		"display_name": "Corn",
+		"texture_path": "res://Resources/Textures/Items/corn.png",
 		"price": 1},
 	{
-		"label": "Cotton",
-		"item_name": "cotton",
+		"display_name": "Cotton",
+		"texture_path": "res://Resources/Textures/Items/cotton.png",
 		"price": 1},
 	{
-		"label": "Egg",
-		"item_name": "egg",
+		"display_name": "Egg",
+		"texture_path": "res://Resources/Textures/Items/egg.png",
 		"price": 1},
 	{
-		"label": "Eggplant",
-		"item_name": "eggplant",
+		"display_name": "Eggplant",
+		"texture_path": "res://Resources/Textures/Items/eggplant.png",
 		"price": 1},
 	{
-		"label": "Feather",
-		"item_name": "feather",
+		"display_name": "Feather",
+		"texture_path": "res://Resources/Textures/Items/feather.png",
 		"price": 1},
 	{
-		"label": "Fish Bone",
-		"item_name": "fish_bone",
+		"display_name": "Fish Bone",
+		"texture_path": "res://Resources/Textures/Items/fish_bone.png",
 		"price": 1},
 	{
-		"label": "Garlic",
-		"item_name": "garlic",
+		"display_name": "Garlic",
+		"texture_path": "res://Resources/Textures/Items/garlic.png",
 		"price": 1},
 	{
-		"label": "Herb 1",
-		"item_name": "herb1",
+		"display_name": "Herb 1",
+		"texture_path": "res://Resources/Textures/Items/herb1.png",
 		"price": 1},
 	{
-		"label": "Herb 2",
-		"item_name": "herb2",
+		"display_name": "Herb 2",
+		"texture_path": "res://Resources/Textures/Items/herb2.png",
 		"price": 1},
 	{
-		"label": "Herb 3",
-		"item_name": "herb3",
+		"display_name": "Herb 3",
+		"texture_path": "res://Resources/Textures/Items/herb3.png",
 		"price": 1},
 	{
-		"label": "Honey",
-		"item_name": "honey",
+		"display_name": "Honey",
+		"texture_path": "res://Resources/Textures/Items/honey.png",
 		"price": 1},
 	{
-		"label": "Lemon",
-		"item_name": "lemon",
+		"display_name": "Lemon",
+		"texture_path": "res://Resources/Textures/Items/lemon.png",
 		"price": 1},
 	{
-		"label": "Milk",
-		"item_name": "milk",
+		"display_name": "Milk",
+		"texture_path": "res://Resources/Textures/Items/milk.png",
 		"price": 1},
 	{
-		"label": "Mortar",
-		"item_name": "mortar",
+		"display_name": "Mortar",
+		"texture_path": "res://Resources/Textures/Items/mortar.png",
 		"price": 1},
 	{
-		"label": "Pear",
-		"item_name": "pear",
+		"display_name": "Pear",
+		"texture_path": "res://Resources/Textures/Items/pear.png",
 		"price": 1},
 	{
-		"label": "Plant",
-		"item_name": "plant1",
+		"display_name": "Plant",
+		"texture_path": "res://Resources/Textures/Items/plant1.png",
 		"price": 1},
 	{
-		"label": "Root",
-		"item_name": "root",
+		"display_name": "Root",
+		"texture_path": "res://Resources/Textures/Items/root.png",
 		"price": 1},
 	{
-		"label": "Salt",
-		"item_name": "salt",
+		"display_name": "Salt",
+		"texture_path": "res://Resources/Textures/Items/salt.png",
 		"price": 1},
 	{
-		"label": "Strawberry",
-		"item_name": "strawberry",
+		"display_name": "Strawberry",
+		"texture_path": "res://Resources/Textures/Items/strawberry.png",
 		"price": 1},
 	{
-		"label": "Tomato",
-		"item_name": "tomato",
+		"display_name": "Tomato",
+		"texture_path": "res://Resources/Textures/Items/tomato.png",
 		"price": 1},
 	{
-		"label": "Worm",
-		"item_name": "worm",
+		"display_name": "Worm",
+		"texture_path": "res://Resources/Textures/Items/worm.png",
 		"price": 1},
 	]
 
 func get_ingredients():
 	return ingredients
-
-func get_ingredient_name(label):
+	
+func get_ingredient(display_name):
 	for index in range(ingredients.size()):
-		if ingredients[index]["label"] == label:
-			return ingredients[index]["item_name"]
-
-func get_ingredient_label(item_name):
-	for index in range(ingredients.size()):
-		if ingredients[index]["item_name"] == item_name:
-			return ingredients[index]["label"]
-			
-func get_ingredient_price(item_name):
-	for index in range(ingredients.size()):
-		if ingredients[index]["item_name"] == item_name:
-			return ingredients[index]["price"]
+		if ingredients[index]["display_name"] == display_name:
+			return ingredients[index]

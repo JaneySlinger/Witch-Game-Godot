@@ -15,7 +15,7 @@ var currentG = 1.0
 var currentB = 1.0
 
 
-var colours = [	Color( 0.25, 0.25, 0.5, 1 ),
+var colours = [	Color( 0.35, 0.35, 0.6, 1 ),
 				Color( 0.32,0.32,0.55, 1 ),
 				Color( 0.39,0.39,0.59, 1 ),
 				Color( 0.45,0.45,0.64, 1 ),
@@ -48,9 +48,9 @@ func _ready():
 func change_lighting():
 	#could change more regularly at smaller intervals to make it smoother
 	var hour = PersistedInventory.hour
-	print(hour)
+	#print(hour)
 	if(hour >= 0 and hour < 12):
-		print("getting lighter")
+		#print("getting lighter")
 		#sky should be getting lighter between midnight and noon
 		var currentR = stepify((minR + ((diffR / 12) * hour)), 0.01)
 		var currentG = stepify((minG + ((diffG / 12) * hour)), 0.01)
@@ -59,7 +59,7 @@ func change_lighting():
 		set_color(new_colour)
 	else:
 		if (hour > 12 and hour <= 23):
-			print("getting darker")
+			#print("getting darker")
 			#sky should be getting darker between noon and midnight
 			var currentR = stepify((maxR - ((diffR / 12) * (hour-12))), 0.01)
 			var currentG = stepify((maxG - ((diffG / 12) * (hour-12))),0.01)
