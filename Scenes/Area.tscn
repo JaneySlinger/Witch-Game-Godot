@@ -4,6 +4,7 @@
 [ext_resource path="res://Scenes/Cat.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Door2.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Witch.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/4_Hair/braids/braids_blonde.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Mushroom.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Resources/TownPaths.tres" type="TileSet" id=7]
 [ext_resource path="res://Resources/town1.tres" type="TileSet" id=8]
@@ -24,7 +25,6 @@
 [ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/2_Shirt/floral/floral_green_light.png" type="Texture" id=23]
 [ext_resource path="res://Scripts/CanvasModulate.gd" type="Script" id=24]
 [ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/1_Characters/character_animation_3.png" type="Texture" id=25]
-[ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/3_Legs/pants/pants_black.png" type="Texture" id=26]
 [ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/2_Eyes/lipstick/lipstick3.png" type="Texture" id=27]
 [ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/5_Accessories/glasses/glasses_black.png" type="Texture" id=28]
 [ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/3_Clothes/1_Shoes/shoes_black.png" type="Texture" id=29]
@@ -354,7 +354,7 @@ shape = SubResource( 1 )
 position = Vector2( 2238.7, 681.651 )
 frames = SubResource( 10 )
 animation = "New Anim"
-frame = 2
+frame = 7
 playing = true
 
 [node name="Boy" parent="." instance=ExtResource( 19 )]
@@ -373,11 +373,6 @@ hair_colour = "black"
 [node name="Shirt" parent="Boy/Sprites" index="2"]
 texture = ExtResource( 30 )
 shirt_style = "sporty"
-colour = "green"
-
-[node name="Trousers" parent="Boy/Sprites" index="3"]
-texture = ExtResource( 26 )
-style = "pants"
 
 [node name="Shoes" parent="Boy/Sprites" index="4"]
 texture = ExtResource( 29 )
@@ -430,14 +425,17 @@ blush_tone = "4"
 position = Vector2( 796.31, 244.934 )
 scale = Vector2( 2, 2 )
 
+[node name="Hair" parent="Cowgirl/Sprites" index="1"]
+texture = ExtResource( 5 )
+hair_style = "braids"
+hair_colour = "blonde"
+
 [node name="Shirt" parent="Cowgirl/Sprites" index="2"]
 texture = ExtResource( 33 )
-shirt_style = "overalls"
 colour = "blue_light"
 
 [node name="Trousers" parent="Cowgirl/Sprites" index="3"]
 texture = ExtResource( 22 )
-style = "pants"
 colour = "blue_light"
 
 [node name="Witch" parent="." instance=ExtResource( 4 )]
@@ -504,7 +502,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Merchant" type="AnimatedSprite" parent="Merchant"]
 position = Vector2( 2367.67, 540.447 )
 frames = SubResource( 20 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Merchant"]
@@ -518,7 +516,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Farmer" type="AnimatedSprite" parent="Farmer"]
 position = Vector2( 2560.54, 536.478 )
 frames = SubResource( 32 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Farmer"]
@@ -532,7 +530,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="MagicMerchant" type="AnimatedSprite" parent="Magic Merchant"]
 position = Vector2( 2717.82, 492.093 )
 frames = SubResource( 43 )
-frame = 8
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Magic Merchant"]
@@ -542,8 +540,19 @@ shape = SubResource( 44 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource( 24 )
 
+[node name="Lumberjack" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1037.19, 248.556 )
+scale = Vector2( 2, 2 )
+
+[node name="Beard" parent="Lumberjack/Sprites" index="9"]
+visible = true
+
+[node name="Blush" parent="Lumberjack/Sprites" index="10"]
+visible = false
+
 [editable path="Boy"]
 [editable path="OldLady"]
 [editable path="Cowgirl"]
 [editable path="Witch"]
 [editable path="Cat"]
+[editable path="Lumberjack"]

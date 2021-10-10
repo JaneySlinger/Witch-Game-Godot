@@ -1,7 +1,7 @@
 tool
 extends Sprite
 
-export(String, "braids", "buzzcut", "curly", "emo", "extralong", "french_curl", "gentleman", "midiwave", "spacebuns", "wavy") var hair_style setget set_hair_style
+export(String, "braids", "buzzcut", "curly", "emo", "extralong", "frenchcurl", "gentleman", "midiwave", "spacebuns", "wavy") var hair_style setget set_hair_style
 export(String, "black", "blonde", "brown", "copper", "emerald", "green", "grey", "light_brown", "lilac", "navy", "pink", "purple", "red", "turquoise") var hair_colour setget set_hair_colour
 		
 func _ready():

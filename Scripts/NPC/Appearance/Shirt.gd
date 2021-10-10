@@ -1,7 +1,7 @@
 tool
 extends Sprite
 
-export(String, "basic", "dress", "floral", "overalls", "sailor", "sporty", "suit") var shirt_style setget set_shirt_style
+export(String, "basic", "dress", "floral", "overalls", "sporty", "suit") var shirt_style setget set_shirt_style
 export(String, "black", "blue", "blue_light", "brown", "green", "green_light", "grey", "orange", "pink", "purple", "red", "white") var colour setget set_colour
 export(bool) var dressOverride setget set_dress_override
 		
