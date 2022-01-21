@@ -29,9 +29,9 @@ margin_left = 40.0
 margin_top = 28.0
 margin_right = 411.0
 margin_bottom = 528.0
-custom_styles/bg = ExtResource( 3 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/bg = ExtResource( 3 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true,
@@ -55,8 +55,8 @@ margin_left = 8.0
 margin_top = 5.0
 margin_right = 518.0
 margin_bottom = 58.0
-custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 6 )
 bbcode_enabled = true
 fit_content_height = true
 scroll_active = false
@@ -124,8 +124,8 @@ margin_left = 17.0
 margin_top = 330.0
 margin_right = 504.0
 margin_bottom = 438.0
-custom_styles/bg = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/bg = ExtResource( 3 )
 auto_height = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -136,8 +136,8 @@ margin_left = 14.0
 margin_top = 205.0
 margin_right = 503.0
 margin_bottom = 297.0
-custom_styles/bg = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/bg = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

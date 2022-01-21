@@ -1,17 +1,22 @@
 extends Node
 
+#loaded from save file
 var playerInv = []
 var shop01 = []
 var playerQuests = []
+var playerMoney = 0
+var shopMoney = 100
+var day = 1
+var player_name = ""
+
+#persisted between areas in session
+var hour = 6
+var minutes = 30
+
 signal item_added(inv, item)
 signal item_removed(inv, display_name)
 signal quest_added(quest_name)
 signal quest_completed(quest_name)
-var playerMoney = 0
-var shopMoney = 100
-var hour = 6
-var minutes = 30
-var day = 1
 
 func add_quest(quest_name):
 	playerQuests.append(quest_name)

@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Witch Game"
-run/main_scene="res://Scenes/Area.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/icon="res://Resources/Textures/icon.png"
 
 [autoload]
@@ -37,6 +37,7 @@ GlobalPotions="*res://Scripts/GlobalPotions.gd"
 GlobalIngredients="*res://Scripts/GlobalIngredients.gd"
 GlobalQuests="*res://Scripts/GlobalQuests.gd"
 BasicImport="*res://Scripts/Dialogue/BasicImport.gd"
+GlobalNpcs="*res://Scripts/NPC/GlobalNPCs.gd"
 
 [display]
 
@@ -108,6 +109,16 @@ inventory={
 quests={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":81,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+social={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+menu={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":77,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 

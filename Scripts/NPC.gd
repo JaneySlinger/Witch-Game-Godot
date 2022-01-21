@@ -1,5 +1,7 @@
 extends KinematicBody2D
 export(String, FILE, "*.json") var dialogue_file
+export(int, 1, 10) var hearts
+export(String) var npc_name = "sample"
 
 func interaction_can_interact(_interactionComponentParent : Node) -> bool:
 	return true

@@ -353,46 +353,64 @@ shape = SubResource( 1 )
 position = Vector2( 2238.7, 681.651 )
 frames = SubResource( 10 )
 animation = "New Anim"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Boy" parent="." instance=ExtResource( 19 )]
 position = Vector2( 2913.36, 326.48 )
 scale = Vector2( 2, 2 )
+npc_name = "John"
 
 [node name="Body" parent="Boy/Sprites" index="0"]
 texture = ExtResource( 25 )
+frame = 180
 skin_tone = "3"
 
 [node name="Hair" parent="Boy/Sprites" index="1"]
 texture = ExtResource( 34 )
+frame = 180
 hair_style = "gentleman"
 hair_colour = "black"
 
 [node name="Shirt" parent="Boy/Sprites" index="2"]
 texture = ExtResource( 30 )
+frame = 180
 shirt_style = "sporty"
+
+[node name="Trousers" parent="Boy/Sprites" index="3"]
+frame = 180
 
 [node name="Shoes" parent="Boy/Sprites" index="4"]
 texture = ExtResource( 29 )
+frame = 180
 colour = "black"
 
 [node name="Lips" parent="Boy/Sprites" index="6"]
 texture = ExtResource( 27 )
+frame = 180
 lip_tone = "3"
+
+[node name="Hat" parent="Boy/Sprites" index="7"]
+frame = 180
 
 [node name="Glasses" parent="Boy/Sprites" index="8"]
 texture = ExtResource( 28 )
+frame = 180
 colour = "black"
+
+[node name="Beard" parent="Boy/Sprites" index="9"]
+frame = 180
 
 [node name="Blush" parent="Boy/Sprites" index="10"]
 texture = ExtResource( 31 )
+frame = 180
 blush_tone = "3"
 
 [node name="OldLady" parent="." instance=ExtResource( 19 )]
 position = Vector2( 580.432, 225.124 )
 scale = Vector2( 2, 2 )
 dialogue_file = "res://Scripts/Dialogue/oldLady.json"
+hearts = 3
 
 [node name="Body" parent="OldLady/Sprites" index="0"]
 texture = ExtResource( 35 )
@@ -510,7 +528,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Merchant" type="AnimatedSprite" parent="Merchant"]
 position = Vector2( 2367.67, 540.447 )
 frames = SubResource( 20 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Merchant"]
@@ -524,7 +542,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Farmer" type="AnimatedSprite" parent="Farmer"]
 position = Vector2( 2560.54, 536.478 )
 frames = SubResource( 32 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Farmer"]

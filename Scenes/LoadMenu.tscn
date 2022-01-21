@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/LoadMenu.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/BackButton.gd" type="Script" id=2]
+
+[node name="LoadMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SavesList" type="ItemList" parent="."]
+margin_left = 25.0
+margin_top = 20.0
+margin_right = 989.0
+margin_bottom = 494.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadButton" type="Button" parent="."]
+margin_left = 714.033
+margin_top = 506.782
+margin_right = 988.033
+margin_bottom = 571.782
+text = "Load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 25.6618
+margin_top = 507.197
+margin_right = 299.662
+margin_bottom = 572.197
+text = "Back to Menu"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="item_selected" from="SavesList" to="." method="_on_SavesList_item_selected"]
+[connection signal="pressed" from="LoadButton" to="." method="_on_LoadButton_pressed"]
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_BackButton_pressed"]

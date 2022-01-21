@@ -36,5 +36,7 @@ func _timeout():
 		return
 	PersistedInventory.minutes = next_minutes
 
-	
-	
+func _on_Bed_nextDay():
+	PersistedInventory.minutes = 30
+	PersistedInventory.hour = 6
+	PersistedInventory.day += 1

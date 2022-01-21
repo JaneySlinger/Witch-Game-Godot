@@ -1519,6 +1519,7 @@ position = Vector2( 419.97, 267.897 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 21 )
 dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
+hearts = 1
 
 [node name="Sprites" type="Node2D" parent="."]
 

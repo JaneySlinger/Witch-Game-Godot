@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Resources/interior.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Witch.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scripts/CauldronInteract.gd" type="Script" id=8]
 [ext_resource path="res://Resources/Textures/Fireplace-Sheet.png" type="Texture" id=9]
 [ext_resource path="res://Resources/Textures/Magical Interiors/CBL(indoors- base assets, magical stuff, tavern, inn_updated_5)/32x32/animatedCauldrons_8Frames-export.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Bed.gd" type="Script" id=11]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -180,6 +181,9 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=31]
 radius = 55.6213
 
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 37.1677, 40.3175 )
+
 [node name="Interior" type="Node2D"]
 
 [node name="Floor" type="TileMap" parent="."]
@@ -273,3 +277,17 @@ collision_layer = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/BrewingArea"]
 position = Vector2( 15.749, 49.137 )
 shape = SubResource( 31 )
+
+[node name="Bed" type="StaticBody2D" parent="."]
+position = Vector2( 512.77, 178.689 )
+script = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+position = Vector2( -1.99786, 2.79892 )
+shape = SubResource( 32 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[connection signal="nextDay" from="Bed" to="Witch/CanvasLayer/Clock" method="_on_Bed_nextDay"]
+
+[editable path="Witch"]

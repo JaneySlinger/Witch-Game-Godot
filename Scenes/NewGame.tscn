@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/NewGame.gd" type="Script" id=1]
+
+[node name="NewGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="RichTextLabel" parent="."]
+margin_left = 242.0
+margin_top = 156.0
+margin_right = 800.0
+margin_bottom = 190.0
+text = "What is your name?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameInput" type="TextEdit" parent="."]
+margin_left = 243.0
+margin_top = 201.0
+margin_right = 635.0
+margin_bottom = 268.0
+
+[node name="Submit" type="Button" parent="."]
+margin_left = 456.976
+margin_top = 289.745
+margin_right = 632.976
+margin_bottom = 333.745
+text = "Submit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Submit" to="." method="_on_Submit_pressed"]
