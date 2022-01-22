@@ -34,7 +34,7 @@ func _on_LoadButton_pressed():
 		print("opened file")
 		PersistedInventory.playerInv = file.get_var()
 		PersistedInventory.shop01 = file.get_var()
-		PersistedInventory.playerQuests = file.get_var()
+		PersistedQuests.playerQuests = file.get_var()
 		PersistedInventory.playerMoney = file.get_var()
 		PersistedInventory.shopMoney = file.get_var()
 		PersistedInventory.day = file.get_var()

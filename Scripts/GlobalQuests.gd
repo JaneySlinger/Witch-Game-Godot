@@ -1,6 +1,5 @@
 extends Node
 
-
 var quests = [
 	{
 		"name": "Save a cat from a tree",
@@ -114,44 +113,44 @@ func get_quest_by_name(quest_name):
 		if quest["name"] == quest_name:
 			return quest
 
-func set_accepted(quest_name):
-	get_quest_by_name(quest_name)["accepted"] = true
+#func set_accepted(quest_name):
+#	get_quest_by_name(quest_name)["accepted"] = true
 	
-func are_requirements_met(quest_name):
-	var quest = get_quest_by_name(quest_name)
-	print("Requirements are: " + String(quest["requirements"]))
-	var result = PersistedInventory.allItemsInInventory("playerInv", quest["requirements"])
-	print("Requirements met: " + String(result))
-	return result
+#func are_requirements_met(quest_name):
+#	var quest = get_quest_by_name(quest_name)
+#	print("Requirements are: " + String(quest["requirements"]))
+#	var result = PersistedInventory.allItemsInInventory("playerInv", quest["requirements"])
+#	print("Requirements met: " + String(result))
+#	return result
 
-func complete_quest(quest_name):
-	if(are_requirements_met(quest_name)):
-		var quest = get_quest_by_name(quest_name)
-		print("setting " + quest_name + " to completed")
-		print("quest is completed before set: " + String(quest["completed"]))
-		get_quest_by_name(quest_name)["completed"] = true
-		print("quest is completed: " + String(quest["completed"]))
-		PersistedInventory.complete_quest(quest_name)
-		submit_items(quest)
-		process_rewards(quest)
-	else:
-		print("Requirements aren't met for this quest.")
+#func complete_quest(quest_name):
+#	if(are_requirements_met(quest_name)):
+#		var quest = get_quest_by_name(quest_name)
+#		print("setting " + quest_name + " to completed")
+#		print("quest is completed before set: " + String(quest["completed"]))
+#		get_quest_by_name(quest_name)["completed"] = true
+#		print("quest is completed: " + String(quest["completed"]))
+#		PersistedQuests.complete_quest(quest_name)
+#		submit_items(quest)
+#		process_rewards(quest)
+#	else:
+#		print("Requirements aren't met for this quest.")
 
-func submit_items(quest):
-	for requirement in quest["requirements"]:
-		PersistedInventory.remove_item("playerInv", requirement)
+#func submit_items(quest):
+#	for requirement in quest["requirements"]:
+#		PersistedInventory.remove_item("playerInv", requirement)
 
-func process_rewards(quest):
-	print("reward money is: " + String(quest["rewards"]["money"]))
-	if quest["rewards"]["money"] != 0:
-		PersistedInventory.playerMoney += quest["rewards"]["money"]
-		print(PersistedInventory.playerMoney)
-	if quest["rewards"]["social"]["increase"] != 0:
-		#TODO: process the social increase
-		pass
-	if quest["rewards"]["special"] != "":
-		#TODO: process the special reward
-		pass
+#func process_rewards(quest):
+#	print("reward money is: " + String(quest["rewards"]["money"]))
+#	if quest["rewards"]["money"] != 0:
+#		PersistedInventory.playerMoney += quest["rewards"]["money"]
+#		print(PersistedInventory.playerMoney)
+#	if quest["rewards"]["social"]["increase"] != 0:
+#		#TODO: process the social increase
+#		pass
+#	if quest["rewards"]["special"] != "":
+#		#TODO: process the special reward
+#		pass
 
-func is_quest_complete(quest_name):
-	return get_quest_by_name(quest_name)["completed"]
+#func is_quest_complete(quest_name):
+#	return get_quest_by_name(quest_name)["completed"]

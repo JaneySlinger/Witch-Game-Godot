@@ -3,7 +3,7 @@ extends Node
 #loaded from save file
 var playerInv = []
 var shop01 = []
-var playerQuests = []
+#var playerQuests = []
 var playerMoney = 0
 var shopMoney = 100
 var day = 1
@@ -15,17 +15,20 @@ var minutes = 30
 
 signal item_added(inv, item)
 signal item_removed(inv, display_name)
-signal quest_added(quest_name)
-signal quest_completed(quest_name)
+#signal quest_added(quest_name)
+#signal quest_completed(quest_name)
 
-func add_quest(quest_name):
-	playerQuests.append(quest_name)
-	print (playerQuests)
-	emit_signal("quest_added", quest_name)
+#func add_quest(quest_name):
+	#playerQuests.append(GlobalQuests.get_quest_by_name(quest_name))
+	#playerQuests.append(quest_name)
+	#print (playerQuests)
+	#emit_signal("quest_added", quest_name)
 	
-func complete_quest(quest_name):
+#func complete_quest(quest_name):
+	#print("player quests are ")
+	#print(playerQuests)
 	#mark the quest with the completed icon in the quest menu
-	emit_signal("quest_completed", quest_name)
+	#emit_signal("quest_completed", quest_name)
 
 func map_to_inventory(inv):
 	if inv == "playerInv": return playerInv

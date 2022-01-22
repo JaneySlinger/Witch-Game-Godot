@@ -19,19 +19,19 @@ var varTooltips = [
 #====> FUNCTIONS
 func give_item(display_name):
 	print("giving item " + display_name)
-	PersistedInventory.add_item("playerInv", display_name)
+	PersistedQuests.add_item("playerInv", display_name)
 	pass
 
 func accept_quest(quest_name):
 	print("accepting quest " + quest_name)
-	PersistedInventory.add_quest(quest_name)
-	GlobalQuests.set_accepted(quest_name)
+	PersistedQuests.add_quest(quest_name)
+	PersistedQuests.set_accepted(quest_name)
 	
 func are_quest_requirements_met(quest_name):
-	return GlobalQuests.are_requirements_met(quest_name)
+	return PersistedQuests.are_requirements_met(quest_name)
 
 func complete_quest(quest_name):
-	GlobalQuests.complete_quest(quest_name)
+	PersistedQuests.complete_quest(quest_name)
 
 # `export` our functions and documentation about them! 
 var functions = [

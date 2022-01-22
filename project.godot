@@ -38,6 +38,7 @@ GlobalIngredients="*res://Scripts/GlobalIngredients.gd"
 GlobalQuests="*res://Scripts/GlobalQuests.gd"
 BasicImport="*res://Scripts/Dialogue/BasicImport.gd"
 GlobalNpcs="*res://Scripts/NPC/GlobalNPCs.gd"
+PersistedQuests="*res://Scripts/PersistedQuests.gd"
 
 [display]
 

@@ -53,7 +53,7 @@ func set_rewards_list():
 		rewardsList.add_item(current_quest["rewards"]["special"], specialTexture, false)
 
 func get_quest_info():
-	current_quest = GlobalQuests.get_quest_by_name(quest_name)
+	current_quest = PersistedQuests.get_quest_by_name(quest_name)
 
 func is_label_visible_button_hidden(label_visible):
 	claimLabel.visible = label_visible
@@ -62,7 +62,7 @@ func is_label_visible_button_hidden(label_visible):
 func set_claim_info():
 	get_quest_info()
 	if(!current_quest["completed"]):
-		if(GlobalQuests.are_requirements_met(quest_name)):
+		if(PersistedQuests.are_requirements_met(quest_name)):
 			if(current_quest["dialogue_to_claim"]):
 				claimLabel.text = "Talk to " + current_quest["requester"] + " to claim your reward."
 				is_label_visible_button_hidden(true)
@@ -77,4 +77,5 @@ func set_claim_info():
 
 
 func _on_Claim_pressed():
-	GlobalQuests.complete_quest(quest_name)
+	PersistedQuests.complete_quest(quest_name)
+	set_claim_info()
