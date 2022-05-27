@@ -5,7 +5,6 @@
 [ext_resource path="res://Scripts/Door2.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Witch.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/4_Hair/braids/braids_blonde.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Mushroom.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Resources/TownPaths.tres" type="TileSet" id=7]
 [ext_resource path="res://Resources/town1.tres" type="TileSet" id=8]
 [ext_resource path="res://Resources/TownObjects.tres" type="TileSet" id=9]
@@ -13,8 +12,9 @@
 [ext_resource path="res://Resources/Textures/Rpg/rpg game assets/tilemap/town/small anims/Sprite_Sheets/Merchant.png" type="Texture" id=11]
 [ext_resource path="res://Resources/Textures/Rpg/rpg game assets/tilemap/town/small anims/Sprite_Sheets/farmer.png" type="Texture" id=12]
 [ext_resource path="res://Resources/Textures/Rpg/rpg game assets/tilemap/town/small anims/Sprite_Sheets/Magic_Merchant.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/CollectableManager.gd" type="Script" id=14]
 [ext_resource path="res://Scripts/Buildings.gd" type="Script" id=15]
-[ext_resource path="res://Scripts/NPC.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/NPC/NPC.gd" type="Script" id=16]
 [ext_resource path="res://Resources/Textures/Rpg/rpg game assets/tilemap/town/questBoard.png" type="Texture" id=17]
 [ext_resource path="res://Scripts/QuestBoard.gd" type="Script" id=18]
 [ext_resource path="res://Scenes/NPC.tscn" type="PackedScene" id=19]
@@ -353,7 +353,7 @@ shape = SubResource( 1 )
 position = Vector2( 2238.7, 681.651 )
 frames = SubResource( 10 )
 animation = "New Anim"
-frame = 5
+frame = 4
 playing = true
 
 [node name="Boy" parent="." instance=ExtResource( 19 )]
@@ -498,29 +498,6 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 shape = SubResource( 11 )
 
-[node name="Mushroom" parent="." instance=ExtResource( 6 )]
-position = Vector2( 191, 334 )
-type = 6
-
-[node name="Mushroom2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 442.091, 279.383 )
-
-[node name="Mushroom3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 110.126, 158.071 )
-type = 7
-
-[node name="Mushroom4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 869.018, 292.17 )
-type = 5
-
-[node name="Mushroom5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 497.716, 508.146 )
-type = 3
-
-[node name="Mushroom6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2258.06, 510.787 )
-type = 3
-
 [node name="Merchant" type="KinematicBody2D" parent="."]
 script = ExtResource( 16 )
 dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
@@ -528,7 +505,6 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Merchant" type="AnimatedSprite" parent="Merchant"]
 position = Vector2( 2367.67, 540.447 )
 frames = SubResource( 20 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Merchant"]
@@ -542,7 +518,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Farmer" type="AnimatedSprite" parent="Farmer"]
 position = Vector2( 2560.54, 536.478 )
 frames = SubResource( 32 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Farmer"]
@@ -556,7 +532,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="MagicMerchant" type="AnimatedSprite" parent="Magic Merchant"]
 position = Vector2( 2717.82, 492.093 )
 frames = SubResource( 43 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Magic Merchant"]
@@ -575,6 +551,9 @@ visible = true
 
 [node name="Blush" parent="Lumberjack/Sprites" index="10"]
 visible = false
+
+[node name="CollectableManager" type="Node2D" parent="."]
+script = ExtResource( 14 )
 
 [editable path="Boy"]
 [editable path="OldLady"]

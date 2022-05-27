@@ -6,9 +6,11 @@ enum Mushroom { BLUE, BLUE_SPARKLE,
 				RED, RED_SPARKLE, 
 				ORANGE, ORANGE_SPARKLE }
 export(Mushroom) var type = Mushroom.BLUE
+var id
 
 onready var itemList = get_node("../Inventory/ItemList")
 onready var properties = GlobalIngredients.get_ingredients()
+
 
 var sprite_rects = [Rect2(224, 352, 32, 32),
 					Rect2(224, 384, 32, 32),
@@ -32,4 +34,5 @@ func set_sprite_rect():
 func _on_Mushroom_body_entered(body):
 	if body.name == "Witch":
 		PersistedInventory.add_item("playerInv", properties[type]["display_name"])
+		PersistedCollectables.set_collected(id, true)
 		get_tree().queue_delete(self)

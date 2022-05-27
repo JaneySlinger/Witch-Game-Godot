@@ -19,6 +19,7 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 func save_game():
 	lighting_animation()
 	emit_signal("nextDay")
+	PersistedCollectables.respawn_collectables()
 	var save_file = "user://" + PersistedInventory.player_name + ".save"
 	var file = File.new()
 	file.open(save_file, File.WRITE)

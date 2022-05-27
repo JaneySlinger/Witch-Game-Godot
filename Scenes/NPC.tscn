@@ -20,7 +20,7 @@
 [ext_resource path="res://Scripts/NPC/Appearance/Blush.gd" type="Script" id=18]
 [ext_resource path="res://Scripts/NPC/Appearance/Beard.gd" type="Script" id=19]
 [ext_resource path="res://Resources/Textures/Shubibubi_cozy_people/characters_full/2_Eyes/lipstick/lipstick2.png" type="Texture" id=20]
-[ext_resource path="res://Scripts/NPC.gd" type="Script" id=21]
+[ext_resource path="res://Scripts/NPC/NPC.gd" type="Script" id=21]
 
 [sub_resource type="Animation" id=10]
 resource_name = "Chop_down"
