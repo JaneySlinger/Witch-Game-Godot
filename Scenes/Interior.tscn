@@ -1,8 +1,8 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Resources/interior.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Witch.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/DoorToOutside.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Resources/Textures/cauldron_green.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Cauldron.gd" type="Script" id=5]
 [ext_resource path="res://Resources/Textures/Magical Interiors/CBL(indoors- base assets, magical stuff, tavern, inn_updated_5)/32x32/animatedFireplace_4Frames-export.png" type="Texture" id=6]
@@ -11,26 +11,6 @@
 [ext_resource path="res://Resources/Textures/Fireplace-Sheet.png" type="Texture" id=9]
 [ext_resource path="res://Resources/Textures/Magical Interiors/CBL(indoors- base assets, magical stuff, tavern, inn_updated_5)/32x32/animatedCauldrons_8Frames-export.png" type="Texture" id=10]
 [ext_resource path="res://Scripts/Bed.gd" type="Script" id=11]
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 96, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 192, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 288, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -67,6 +47,26 @@ flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 1152, 0, 192, 192 )
 
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 288, 0, 96, 64 )
+
 [sub_resource type="SpriteFrames" id=12]
 animations = [ {
 "frames": [  ],
@@ -74,22 +74,19 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "MagicalInteriorFirePlace",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": true,
 "name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "MagicalInteriorFirePlace",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 97.7197, 63.9317 )
-
-[sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 54.2819, 26.1286 )
 
 [sub_resource type="CapsuleShape2D" id=15]
 radius = 19.2389
@@ -211,7 +208,7 @@ tile_data = PoolIntArray( 262169, 5, 0, 262182, 0, 12, 262184, 0, 12, 262186, 0,
 position = Vector2( 629.309, 130.6 )
 frames = SubResource( 12 )
 animation = "MagicalInteriorFirePlace"
-frame = 2
+frame = 3
 speed_scale = 0.8
 playing = true
 
@@ -248,15 +245,6 @@ cell_size = Vector2( 8, 8 )
 format = 1
 tile_data = PoolIntArray( 1704048, 88, 65536, 1704072, 88, 131073, 1835129, 66, 0, 1900675, 74, 0, 2228337, 76, 0, 2359433, 73, 0, 3473538, 75, 0, 4718732, 78, 0, 7864472, 89, 0 )
 
-[node name="DoorToOutside" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 0
-script = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToOutside"]
-position = Vector2( 636.822, 507.286 )
-shape = SubResource( 14 )
-
 [node name="Cauldron" type="KinematicBody2D" parent="."]
 position = Vector2( 727.388, 375.414 )
 script = ExtResource( 8 )
@@ -287,6 +275,11 @@ position = Vector2( -1.99786, 2.79892 )
 shape = SubResource( 32 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Door" parent="." instance=ExtResource( 3 )]
+position = Vector2( 633.51, 507.999 )
+collision_layer = 3
+destination = "Area"
 
 [connection signal="nextDay" from="Bed" to="Witch/CanvasLayer/Clock" method="_on_Bed_nextDay"]
 

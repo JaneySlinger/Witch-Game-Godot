@@ -1,4 +1,5 @@
 extends StaticBody2D
+export(String) var destination
 
 func interaction_can_interact(_interactionComponentParent : Node) -> bool:
 	print("Function being called")
@@ -7,7 +8,8 @@ func interaction_can_interact(_interactionComponentParent : Node) -> bool:
 	return true
 
 func interaction_interact(_interactionComponentParent : Node) -> void:
-		print("Gone inside!")
+		print("Left greenhouse!")
 		#go inside
-		get_tree().change_scene("res://Scenes/Interior.tscn")
+		print(destination)
+		get_tree().change_scene("res://Scenes/" + destination + ".tscn")
 
