@@ -12,6 +12,26 @@
 [ext_resource path="res://Resources/Textures/Magical Interiors/CBL(indoors- base assets, magical stuff, tavern, inn_updated_5)/32x32/animatedCauldrons_8Frames-export.png" type="Texture" id=10]
 [ext_resource path="res://Scripts/Bed.gd" type="Script" id=11]
 
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 288, 0, 96, 64 )
+
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 9 )
@@ -47,31 +67,11 @@ flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 1152, 0, 192, 192 )
 
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 96, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 192, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 288, 0, 96, 64 )
-
 [sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [  ],
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
 "loop": true,
-"name": "default",
+"name": "MagicalInteriorFirePlace",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
@@ -79,9 +79,9 @@ animations = [ {
 "name": "New Anim",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"frames": [  ],
 "loop": true,
-"name": "MagicalInteriorFirePlace",
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -91,6 +91,36 @@ extents = Vector2( 97.7197, 63.9317 )
 [sub_resource type="CapsuleShape2D" id=15]
 radius = 19.2389
 height = 19.149
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 160, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
@@ -132,46 +162,16 @@ flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 448, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=24]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=25]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 32, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=26]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 64, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=27]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 96, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=28]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 128, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=29]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 160, 0, 32, 64 )
-
 [sub_resource type="SpriteFrames" id=30]
 animations = [ {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
-"loop": true,
-"name": "green",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
 "loop": true,
 "name": "green_old",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "green",
 "speed": 5.0
 } ]
 
@@ -224,7 +224,7 @@ format = 1
 tile_data = PoolIntArray( 458795, 96, 0, 524335, 94, 0, 589852, 46, 0, 589858, 46, 0, 851998, 86, 0, 1114140, 25, 0, 1114144, 25, 0, 1114154, 92, 0, 1245220, 34, 0 )
 
 [node name="Witch" parent="." instance=ExtResource( 2 )]
-position = Vector2( 541.35, 257.754 )
+position = Vector2( 634.794, 456.912 )
 
 [node name="Walls2" type="TileMap" parent="."]
 tile_set = ExtResource( 7 )

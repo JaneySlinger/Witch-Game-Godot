@@ -312,15 +312,7 @@ format = 1
 tile_data = PoolIntArray( -1048539, 3, 1, -1048538, 3, 1, -982994, 3, 2, -917469, 3, 2, -851930, 3, 0, -786397, 3, 0, -720858, 3, 2, -655326, 3, 2, -589788, 3, 2, -524250, 3, 1, -458717, 3, 2, 131091, 27, 0, 131097, 28, 0, 327698, 3, 1, 458774, 3, 0, 524298, 3, 4, 524300, 6, 0, 524311, 3, 3, 655358, 6, 0, 720919, 3, 3, 720920, 3, 3, 720921, 3, 3, 720922, 3, 3, 720923, 3, 3, 720924, 3, 3, 720925, 3, 3, 720926, 3, 3, 720927, 3, 3, 786437, 3, 2, 786453, 11, 0, 917506, 3, 4, 983064, 10, 0, 1048581, 6, 0, 1048582, 6, 0, 1048583, 6, 0, 1048584, 6, 0, 1048585, 6, 0, 1048586, 6, 0, 1048587, 6, 0, 1048588, 6, 0, 1048589, 6, 0, 1114141, 10, 0 )
 script = ExtResource( 15 )
 HOUSE_STATUS = "02"
-HOUSE_PLACEMENT = {
-"x": 19,
-"y": 2
-}
 GREENHOUSE_STATUS = true
-GREENHOUSE_PLACEMENT = {
-"x": 25,
-"y": 2
-}
 
 [node name="TownBuildings" type="TileMap" parent="."]
 tile_set = ExtResource( 8 )
@@ -350,7 +342,7 @@ shape = SubResource( 1 )
 position = Vector2( 2238.7, 681.651 )
 frames = SubResource( 10 )
 animation = "New Anim"
-frame = 7
+frame = 1
 playing = true
 
 [node name="Boy" parent="." instance=ExtResource( 19 )]
@@ -453,7 +445,7 @@ texture = ExtResource( 22 )
 colour = "blue_light"
 
 [node name="Witch" parent="." instance=ExtResource( 4 )]
-position = Vector2( 464.713, 80.07 )
+position = Vector2( 697.713, 296.07 )
 
 [node name="Cat" parent="." instance=ExtResource( 2 )]
 position = Vector2( 350.669, 330.371 )
@@ -493,7 +485,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Merchant" type="AnimatedSprite" parent="Merchant"]
 position = Vector2( 2367.67, 540.447 )
 frames = SubResource( 20 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Merchant"]
@@ -507,6 +499,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="Farmer" type="AnimatedSprite" parent="Farmer"]
 position = Vector2( 2560.54, 536.478 )
 frames = SubResource( 32 )
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Farmer"]
@@ -520,7 +513,7 @@ dialogue_file = "res://Scripts/Dialogue/shopkeeper.json"
 [node name="MagicMerchant" type="AnimatedSprite" parent="Magic Merchant"]
 position = Vector2( 2717.82, 492.093 )
 frames = SubResource( 43 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Magic Merchant"]
