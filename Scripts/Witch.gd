@@ -21,6 +21,9 @@ func _process(delta):
 			animation_loop()
 		"casting":
 			animation_loop()
+		"flying":
+			control_loop()
+			animation_loop()
 			
 func control_loop():
 	state = "idle"
@@ -32,6 +35,9 @@ func control_loop():
 		state = "casting"
 		$SpellTimer.start()
 		
+	if (Input.is_action_pressed("flight_down") or (Input.is_action_pressed("flight_left")) or (Input.is_action_pressed("flight_right")) or (Input.is_action_pressed("flight_up")) ):
+		state = "flying"
+		
 func animation_loop():
 	match state:
 		"idle":
@@ -40,6 +46,8 @@ func animation_loop():
 			animation_switch("walk")
 		"casting":
 			animation_switch("spell")
+		"flying":
+			animation_switch("flight")
 			
 func animation_switch(animation):
 	var new_animation = str(animation, "_", spritedir_name)
@@ -47,10 +55,10 @@ func animation_switch(animation):
 		$WitchSprite.play(new_animation)
 
 func get_movedir():
-	var left = Input.is_action_pressed("ui_left")
-	var right = Input.is_action_pressed("ui_right")
-	var up = Input.is_action_pressed("ui_up")
-	var down = Input.is_action_pressed("ui_down")
+	var left = Input.is_action_pressed("ui_left") or Input.is_action_pressed("flight_left")
+	var right = Input.is_action_pressed("ui_right") or Input.is_action_pressed("flight_right")
+	var up = Input.is_action_pressed("ui_up") or Input.is_action_pressed("flight_up")
+	var down = Input.is_action_pressed("ui_down") or Input.is_action_pressed("flight_down")
 	
 	var x = -int(left) + int(right)
 	var y = -int(up) + int(down)
