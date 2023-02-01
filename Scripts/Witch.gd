@@ -11,17 +11,24 @@ var spritedir = DOWN
 var spritedir_name = "down"
 var state = "idle"
 
+onready var witch_sprite = get_node("WitchSprite")
+onready var collision_shape = get_node("CollisionShape2D")
+
 func _process(delta):
 	match state:
 		"idle":
+			should_disable_collisions(false)
 			control_loop()
 			animation_loop()
 		"walking":
+			should_disable_collisions(false)
 			control_loop()
 			animation_loop()
 		"casting":
+			should_disable_collisions(false)
 			animation_loop()
 		"flying":
+			should_disable_collisions(true)
 			control_loop()
 			animation_loop()
 			
@@ -93,3 +100,11 @@ func set_spritedir(direction):
 func _on_SpellTimer_timeout():
 	state = "idle"
 		
+
+func should_disable_collisions(disabled):
+	#used for flying over things
+	collision_shape.disabled = disabled
+	if(disabled):
+		witch_sprite.z_index = 1	#set above other sprites
+	else:
+		witch_sprite.z_index = 0

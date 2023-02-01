@@ -363,7 +363,7 @@ script = ExtResource( 2 )
 position = Vector2( -0.217072, -11.2154 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 41 )
-animation = "flight_right"
+animation = "idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.397667, -1.89131 )
