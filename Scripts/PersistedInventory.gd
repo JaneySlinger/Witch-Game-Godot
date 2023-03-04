@@ -75,6 +75,15 @@ func allItemsInInventory(inv, required_items):
 	else:
 		return false
 
+func isItemInInventory(inv, required_item):
+	var mapped_inv = map_to_inventory(inv)
+	var copied_inventory = mapped_inv.duplicate(true)
+	for inventory_item in copied_inventory:
+		if inventory_item["display_name"] == required_item:
+			print("item: " + required_item + " is present")
+			return true
+	return false
+
 func get_item_details(display_name):
 	var item = GlobalIngredients.get_ingredient(display_name)
 	if(item != null):

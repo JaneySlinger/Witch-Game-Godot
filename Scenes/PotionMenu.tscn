@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Textures/Items/potion_blue.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Styles/BackgroundColour.tres" type="StyleBox" id=2]
 [ext_resource path="res://Resources/Fonts/SmallCursive.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Resources/Styles/PurpleBackground.tres" type="StyleBox" id=4]
 [ext_resource path="res://Resources/Fonts/Cursive.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/Textures/Items/banana.png" type="Texture" id=6]
 [ext_resource path="res://Resources/Styles/LighterBackground.tres" type="StyleBox" id=7]
 [ext_resource path="res://Scripts/PotionMenu.gd" type="Script" id=14]
 
@@ -119,27 +120,31 @@ margin_right = 220.0
 margin_bottom = 325.592
 rect_scale = Vector2( 3, 3 )
 columns = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Ingredient1" type="TextureRect" parent="Panel2/GridContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 6 )
 
 [node name="Ingredient2" type="TextureRect" parent="Panel2/GridContainer"]
-margin_left = 4.0
-margin_right = 4.0
+margin_left = 36.0
+margin_right = 36.0
+margin_bottom = 32.0
 
 [node name="Ingredient3" type="TextureRect" parent="Panel2/GridContainer"]
-margin_left = 8.0
-margin_right = 8.0
+margin_left = 40.0
+margin_right = 40.0
+margin_bottom = 32.0
 
 [node name="Ingredient4" type="TextureRect" parent="Panel2/GridContainer"]
-margin_left = 12.0
-margin_right = 12.0
+margin_left = 44.0
+margin_right = 44.0
+margin_bottom = 32.0
 
 [node name="Ingredient5" type="TextureRect" parent="Panel2/GridContainer"]
-margin_left = 16.0
-margin_right = 16.0
+margin_left = 48.0
+margin_right = 48.0
+margin_bottom = 32.0
 
 [node name="IngredientsLabel" type="Label" parent="Panel2"]
 margin_left = 11.0284

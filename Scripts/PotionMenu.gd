@@ -6,6 +6,7 @@ onready var potionNameLabel = get_node("Panel2/PotionName")
 onready var potionInfoLabel = get_node("Panel2/PotionInfo")
 onready var questList = get_node("Panel2/QuestsRequiring")
 onready var brewButton = get_node("Panel2/BrewButton")
+onready var greyShader = preload("res://Shaders/half_transparent.gdshader")
 
 onready var potions = GlobalPotions.get_potions() 
 
@@ -51,7 +52,14 @@ func setIngredientTextures(potion):
 		if(index < 5):
 			var textureRect = get_node("Panel2/GridContainer/Ingredient" + String(index + 1))
 			var ingredient = GlobalIngredients.get_ingredient(currentPotionIngredients[index])
+			if(PersistedInventory.isItemInInventory("playerInv", currentPotionIngredients[index])):
+				textureRect.material = null
+			else:
+				#don't have item so use shader to grey it out
+				textureRect.material = ShaderMaterial.new()
+				textureRect.material.shader = greyShader
 			textureRect.texture = load(ingredient["texture_path"])	#display name
+			
 
 func clearIngredientTextures():
 	for index in range(5):
